@@ -1,0 +1,9 @@
+<nav id="nav" class="sticky top shadow background-accent color-alt z-3 clearfix">
+	{% if page.url != '/' %}
+		<a href="{{ '/' }}" rel="bookmark" title="Home" class="color-inherit" title="Home">
+			{% include icon.html icon='home' %}
+		</a>
+	{% endif %}
+	<button is="login-button" title="Sign In" class="btn btn-accept float-right" hidden="">Sign In</button>
+	<button is="logout-button" title="Sign Out" class="btn btn-reject float-right" hidden="">Sign Out</button>
+</nav>

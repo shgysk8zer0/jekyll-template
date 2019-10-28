@@ -1,0 +1,4 @@
+<aside id="sidebar" class="card shadow">
+	{% if include.pinned-posts %}{% include pinned-posts.html count=layout.pinned-posts %}{% endif %}
+	{% if include.recent-posts %}{% include recent-posts.html count=layout.recent-posts %}{% endif %}
+</aside>

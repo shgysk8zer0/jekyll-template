@@ -1,0 +1,4 @@
+light:
+  background: 'red'
+dark:
+  background: 'blue'

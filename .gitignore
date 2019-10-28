@@ -1,3 +1,6 @@
+# Jekyll stuff
+/_site/*
+!/_site/.gitkeep
 *.sql
 /img/icons.svg
 *.min.*

@@ -1,0 +1,10 @@
+<section id="section-{{ include.category }}" class="directory">
+	<h2 class="center">{{ include.category | capitalize }} in the Kern River Valley</h2>
+	<div class="grid directory-listings" id="{{ include.category | slugify }}">
+		{% for company in site.data.organizations[include.category] %}
+			<div class="card shadow clearfix local-business" id="{{ company.last.name | slugify}}" itemtype="http://schema.org/{{ include.itemtype | default: 'LocalBusiness' }}" itemscope="">
+				{% include local-business.html business=company.last %}
+			</div>
+		{% endfor %}
+	</div>
+</section>

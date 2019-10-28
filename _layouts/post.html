@@ -1,0 +1,33 @@
+---
+name: post
+theme: default
+og-type: website
+itemtype: 'https://schema.org/WebPage'
+---
+<!DOCTYPE html>
+<html
+	lang="{{ site.lang }}"
+	dir="{{ site.dir }}"
+	class="no-js border-box smooth-scroll"
+	data-theme="{{ page.theme | default: layout.theme }}"
+	data-layout="right-sidebar"
+	{% if site.service_worker %}data-service-worker="{{site.service_worker }}"{% endif %}
+	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
+	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
+	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
+	itemtype="{{ page.itemtype | default: layout.itemtype }}"
+	prefix="og: http://ogp.me/ns#"
+	itemscope=""
+>
+	{% include head.html %}
+	<body id="top" class="grid font-main background-primary color-default overflow-x-hidden">
+		{% include header.html %}
+		{% include nav.html %}
+		<main id="main" class="card shadow">
+			{% include article.html %}
+		</main>
+		{% include sidebar.html recent-posts=5 %}
+		{% include footer.html %}
+		{% include share-button.html %}
+	</body>
+</html>

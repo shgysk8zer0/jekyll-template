@@ -1,0 +1,9 @@
+{% assign posts = site.posts | where: 'category', include.category %}
+{% include breadcrumb-nav.html category=include.category %}
+<div class="grid grid-gallery">
+	{% for post in posts limit: 12 %}
+		<div class="article-preview card shadow-dark">
+			{% include post-preview.html post=post %}
+		</div>
+	{% endfor %}
+</div>

@@ -1,0 +1,6 @@
+<link
+	rel="stylesheet"
+	href="{{ include.href }}"
+	media="{{ include.media | default: 'all' }}"
+	{% if include.crossorigin %}crossorigin="{{ include.crossorigin }}"{% endif %}
+	{% if stylesheet.integrity %}integrity="{{ include.integrity }}"{% endif %} />
