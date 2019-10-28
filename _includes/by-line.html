@@ -1,0 +1,71 @@
+<div itemtype="http://schema.org/Person" itemprop="author" itemscope="" class="author-info clearfix">
+	{% capture icon-class %}{{ include.animation | default: 'jackInTheBox' }} current-color icon animation-speed-normal animation-ease-out{% endcapture %}
+	<details>
+		<summary>
+			<b>By</b>
+			<span itemprop="givenName">{{ include.author.givenName }}</span>
+			<span itemprop="familyName">{{ include.author.familyName }}</span>
+			{% if include.author.gravatar %}
+				<a href="https://secure.gravatar.com/{{ include.author.image.gravatar }}" title="Gravatar" rel="noopener external">
+					{% include gravatar.html
+						gravatar=include.author.gravatar
+						class='jackInTheBox round animation-speed-normal animation-ease-out'
+						sizes='1.8rem'
+						itemprop='image'
+					%}
+				</a>
+			{% elsif include.author.image %}
+				<img itemprop="image" src="{{ include.author.image }}" class="round {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out" />
+			{% endif %}
+		</summary>
+		<div class="big meta-author-links flex row">
+			{% if include.author.url %}
+			<a itemprop="url" href="{{ include.author.url }}" rel="external noopener" class="no-text-decoration">
+				{% include icon.html icon='web-browser' class=icon-class %}
+			</a>
+			{% endif %}
+			{% if include.author.github %}
+				<a itemprop="sameAs" href="https://github.com/{{ include.author.github }}" rel="external noopener" title="GitHub" class="no-text-decoration">
+					{% include icon.html icon='mark-github' class=icon-class %}
+				</a>
+			{% endif %}
+			{% if include.author.twitter %}
+			<a itemprop="sameAs" href="https://twitter.com/{{ include.author.twitter }}" rel="external noopener" title="Twitter" class="no-text-decoration">
+				{% include icon.html icon='twitter' class=icon-class %}
+			</a>
+			{% endif %}
+			{% if include.author.linkedin %}
+				<a itemprop="sameAs" href="https://www.linkedin.com/in/{{ include.author.linkedin }}/" rel="noopener external" title="LinkedIn" class="no-text-decoration">
+					{% include icon.html icon='linkedin' class=icon-class %}
+				</a>
+			{% endif %}
+			{% if include.author.google_plus %}
+				<a itemprop="sameAs" href="https://plus.google.com/{{ include.author.googlePlus }}" rel="noopener external" title="Google+" class="no-text-decoration">
+					{% include icon.html icon='google+' class=icon-class %}
+				</a>
+			{% endif %}
+			{% if include.author.youtube %}
+				<a itemprop="sameAs" href="https://youtube/com/channel/{{ include.author.youtube }}" rel="noopener external" title="YouTube" class="no-text-decoration">
+					<svg class="icon {{ include.animation | default: 'jackInTheBox' }} animation-speed-normal animation-ease-out">
+						<use xlink:href="{{ site.icons | absolute_url | append: '#youtube' }}" />
+					</svg>
+				</a>
+			{% endif %}
+			{% if include.author.stackoverflow %}
+				<a itemprop="sameAs" href="https://stackoverflow.com/users/{{ include.author.stackoverflow }}" rel="noopener external" title="YouTube" class="no-text-decoration">
+					{% include icon.html icon='stackoverflow' class=icon-class %}
+				</a>
+			{% endif %}
+			{% if include.author.reddit %}
+				<a itemprop="sameAs" href="https://www.reddit.com/user/{{ include.author.reddit }}" rel="noopener external" title="YouTube" class="no-text-decoration">
+					{% include icon.html icon='reddit' class=icon-class %}
+				</a>
+			{% endif %}
+			{% if include.author.email %}
+				<a itemprop="email" content="{{ include.author.email }}" href="mailto:{{ include.author.email }}" title="Email" class="no-text-decoration">
+					{% include icon.html icon='mail-unread' class=icon-class %}
+				</a>
+			{% endif %}
+		</div>
+	</details>
+</div>

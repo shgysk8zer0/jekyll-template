@@ -1,0 +1,9 @@
+<script
+	type="{{ include.type | default: 'text/javascript' }}"
+	src="{{ include.src }}"
+	{% if include.crossorigin %}crossorigin="{{ include.crossorigin }}"{% endif %}
+	{% if include.async %}async=""{% endif %}
+	{% if include.defer %}defer=""{% endif %}
+	{% if include.nomodule %}nomodule=""{% endif %}
+	{% if include.integrity %}integrity="{{ include.integrity }}"{% endif %}
+></script>

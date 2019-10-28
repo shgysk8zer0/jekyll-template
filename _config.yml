@@ -1,0 +1,147 @@
+author: Chris Zuber
+title: Jekyll Template Demo
+# url: ''
+markdown: kramdown
+version: 3.2.15
+timezone: America/Los_Angeles
+lang: en
+dir: ltr
+charset: utf-8
+paginate: 8
+paginate_path: "/page-:num/"
+viewport: width=device-width
+robots: 'follow, index'
+referrer: origin-when-cross-origin
+manifest: /manifest.json
+tiles-config: /browserconfig.xml
+# service_worker:
+og-type: website
+description: "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc."
+mobile-web-app-capable: true
+# canonical: ''
+keywords:
+- jekyll
+- static
+- template
+- github
+- CSS3
+- HTML5
+- responsive design
+- progressive web app
+- pwa
+- ecmascript
+- javascript
+- es6
+repository:
+  username: shgysk8zer0
+  project: jekyll-template
+  title: Jekyll Template
+# twitter:
+feed:
+  url: /feed.rss
+  type: application/rss+xml
+icons: '/img/icons.svg'
+theme-color: '#528ff9'
+background-color: '#242424'
+# discus-identifier:
+# google-analytics:
+# ad-sense:
+# webmaster-verifications:
+#   google:
+#   bing:
+scripts:
+  development:
+  - src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
+    type: text/javascript
+    crossorigin: anonymous
+  - src: /js/index.js
+    type: module
+    async: true
+  production:
+  - src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
+    type: text/javascript
+    crossorigin: anonymous
+  - src: /js/index.js
+    type: module
+    async: true
+stylesheets:
+  development:
+  - href: /css/index.css
+    media: all
+  production:
+  - href: /css/index.css
+    media: all
+preload:
+- href: /img/icons.svg
+  as: image
+  type: image/svg+xml
+appicons:
+- src: /img/favicon.svg
+  sizes: any
+  type: image/svg+xml
+- src: /img/icon-512.png
+  sizes: 512x512
+  type: image/png
+- src: /img/icon-192.png
+  sizes: 192x192
+  type: image/png
+screenshots:
+- src: 'https://i.imgur.com/uRKaQQQl.png'
+  sizes: 640x354
+  type: image/png
+defaults:
+- scope:
+    path: _posts
+  values:
+    layout: post
+    author:
+    - givenName: Chris
+    - familyName: Zuber
+    - url: 'https://shgysk8zer0.github.io'
+    - gravatar: '43578597e449298f5488c2407c8a8ae5'
+    - twitter: shgysk8zer0
+    permalink: /posts/:categories/:year/:month/:day/:title/
+    comments: true
+    ads: false
+    index: true
+- scope:
+    path: _drafts
+  values:
+    layout: post
+    author: Chris Zuber
+    permalink: /posts/:categories/:year/:month/:day/:title/
+    comments: false
+    ads: false
+plugins:
+- jekyll-gist
+- jekyll-youtube
+- jekyll-admin
+- jekyll-watch
+- jekyll-paginate
+exclude:
+- "*.rb"
+- "*.gemspec"
+- "*.php"
+- "*.sh"
+- "*.csv"
+- "*.sfd"
+- "*.ai"
+- "*.psd"
+- "*.sketch"
+- "*.yml"
+- "*.lock"
+- "*.log"
+- "*.config.js"
+- ".gitkeep"
+- docs/
+- "/.github/"
+- Gemfile
+- node_modules/
+- palette.xml
+- README.md
+- LICENSE
+- "/img/octicons/*.md"
+- "/img/octicons/LICENSE"
+- "/img/octicons/script"
+- "/img/adwaita-icons/docs"
+- "/img/adwaita-icons/LICENSE"

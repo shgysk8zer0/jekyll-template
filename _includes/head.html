@@ -1,0 +1,87 @@
+<head>
+	<base href="/" />
+	<meta charset="{{ site.charset }}" />
+	<meta name="viewport" content="{{ page.viewport | default: site.viewport }}" />
+	<meta name="robots" content="{{ page.robots | default: site.robots }}" />
+	<meta name="description" content="{{ page.description }}" />
+	<meta itemprop="description" content="{{ page.description }}" />
+	<meta name="keywords" content="{{ page.tags | join: ', ' }}" />
+	<meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
+	<meta name="referrer" content="{{ page.referrer | default: site.referrer }}"/>
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta itemprop="thumbnailUrl" content="{{{ page.thumbnail.url | default: site.thumbnail.url }}" />
+	<!-- Social data -->
+	<!-- Facebook | OpenGraph -->
+	<meta property="og:type" content="{{ page.og-type | default: layout.og-type }}" />
+	<meta property="og:title" content="{{ page.title | default: 'Home' }} | {{ site.title }}" />
+	<meta property="og:url" content="{{ page.url | absolute_url }}" />
+	<meta property="og:description" content="{{ page.description }}" />
+	<meta property="og:keywords" content="{{ page.tags | join: ', ' }}" />
+	<meta property="og:image" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
+	{% if site.facebook-id %}
+		<meta property="og:app_id" content="{{ site.facebook-id }}" />
+	{% endif %}
+	<!-- /Facebook | OpenGraph -->
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="" />
+	<meta name="twitter:description" content="{{ page.description }}" />
+	<meta name="twitter:image" content="{{{ page.thumbnail.url | default: site.thumbnail.url }}" />
+	<!-- /Twitter -->
+	<!-- /Social data -->
+	<meta name="msapplication-TileColor" content="{{ site.theme-color | default: '#528ff9' }}" />
+	<meta name="msapplication-config" content="{{ site.tiles-config }}" />
+	<meta name="theme-color" content="{{ site.theme-color | default: '#528ff9' }}" />
+	{% if site.webmaster-verifications.google %}
+		<meta name="google-site-verification" content="{{ site.webmaster-verifications.google }}" />
+	{% endif %}
+	{% if site.webmaster-verifications.bing %}
+		<meta name="msvalidate.01" content="{{ site.webmaster-verifications.bing }}" />
+	{% endif %}
+	{% if site.google-analytics %}
+		{% include google-analytics.html %}
+	{% endif %}
+	{% if page.ads and site.ad-sense %}
+		{% include adsense.html %}
+	{% endif %}
+	<title itemprop="headline">{{ page.title | default: 'Home' }} | {{ site.title }}</title>
+	{% if site.scripts %}{% for script in site.scripts[jekyll.environment] %}
+		{% include script.html src=script.src type=script.type crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
+	{% endfor %}{% endif %}
+	<!-- <script type="module" src="/js/index.js" async=""></script> -->
+	{% if layout.scripts %}{% for script in layout.scripts %}
+		{% include script.html src=script.src type=script.type crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
+	{% endfor %}{% endif %}
+	{% if page.scripts %}{% for script in page.scripts %}
+		{% include script.html src=script.src type=script.type crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
+	{% endfor %}{% endif %}
+	<link rel="manifest" href="{{ site.manifest }}" />
+	<link rel="license" href="/LICENSE" />
+	<link rel="icon" href="/img/favicon.svg" type="image/svg+xml" sizes="any" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/icon-16.png" />
+	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="{{ site.theme-color }}" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	{% if site.preload %}{% for preload in site.preload %}
+		<link rel="preload" href="{{ preload.href }}" as="{{ preload.as | default: 'image' }}" type="{{ preload.type }}"/>
+	{% endfor %}{% endif %}
+	{% if layout.preload %}{% for preload in layout.preload %}
+		<link rel="preload" href="{{ preload.href }}" as="{{ preload.as | default: 'image' }}" type="{{ preload.type }}"/>
+	{% endfor %}{% endif %}
+	{% if page.preload %}{% for preload in page.preload %}
+		<link rel="preload" href="{{ preload.href }}" as="{{ preload.as | default: 'image' }}" type="{{ preload.type }}"/>
+	{% endfor %}{% endif %}
+	<link rel="preload" href="{{ site.icons }}" as="image" type="image/svg+xml" />
+	{% if site.stylesheets %}{% for stylesheet in site.stylesheets[jekyll.environment] %}
+		{% include stylesheet.html href=stylesheet.href crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
+	{% endfor %}{% endif %}
+	{% if layout.stylesheets %}{% for stylesheet in layout.stylesheets %}
+		{% include stylesheet.html href=stylesheet.href crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
+	{% endfor %}{% endif %}
+	{% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
+		{% include stylesheet.html href=stylesheet.href crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
+	{% endfor %}{% endif %}
+	{% if site.feed %}<link rel="alternate" href="{{ site.feed.url }}" type="{{ site.feed.type | default: 'application/rss+xml' }}" title="{{ site.feed.title | default: 'Feed' }}" />{% endif %}
+	{% if page.feed %}<link rel="alternate" href="{{ page.feed.url }}" type="{{ page.feed.type | default: 'application/rss+xml' }}" title="{{ page.feed.title | default: 'Page Feed' }}" />{% endif %}
+</head>

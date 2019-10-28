@@ -1,0 +1,38 @@
+<nav class="sticky card under-nav background-accent color-alt z-2 shadow-dark" itemprop="breadcrumb" itemtype="http://schema.org/BreadcrumbList" itemscope="" hidden="">
+	<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+		<a href="{{ site.url }}" itemprop="item" title="Home" aria-label="Home">
+			{% include icon.html icon='home' %}
+		</a>
+		<meta itemprop="name" content="Home"/>
+		<meta itemprop="position" content="1" />
+	</span>
+	{% if include.category %}
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<a href="{{ include.category | downcase | prepend: '/posts/' | append: '/'  }}" rel="tag" itemprop="item">
+				<span itemprop="name">{{ include.category | capitalize }}</span>
+				<meta itemprop="position" content="2" />
+			</a>
+		</span>
+	{% endif %}
+	{% if include.post %}
+		<span class="breadcrumb" itemprop="itemListElement" itemtype="http://schema.org/ListItem" itemscope="">
+			<a href="{{ include.post.url  }}" itemprop="item">
+				<span itemprop="name">{{ include.post.title | capitalize }}</span>
+				<meta itemprop="position" content="{% if include.category %}3{% else %}2{% endif %}" />
+			</a>
+		</span>
+	{% endif %}
+	{% if paginator.previous_page or paginator.next_page %}
+		<hr />
+		{% if paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path  }}" rel="prev" role="button" title="Previous page">
+				{% include icon.html icon='prev' %}
+			</a>
+		{% endif %}
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path  }}" role="button" rel="next" title="Next page">
+				{% include icon.html icon='next' %}
+			</a>
+		{% endif %}
+	{% endif %}
+</nav>
