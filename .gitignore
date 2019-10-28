@@ -1,6 +1,6 @@
 # Jekyll stuff
 /_site/*
-!/_site/.gitignore
+!/_site/.gitkeep
 *.sql
 /img/icons.svg
 *.min.*
