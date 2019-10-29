@@ -61,7 +61,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
 	<link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png" />
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/icon-16.png" />
-	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="{{ site.theme-color }}" />
+	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="{{ site.theme-color | default: '#528ff9' }}" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	{% if site.preload %}{% for preload in site.preload %}
 		<link rel="preload" href="{{ preload.href }}" as="{{ preload.as | default: 'image' }}" type="{{ preload.type }}"/>

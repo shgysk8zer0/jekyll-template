@@ -1,6 +1,8 @@
+---
+---
 /* eslint no-unused-vars: 0 */
 const config = {
-	version: location.hostname === 'localhost' ? new Date().toISOString() : '1.0.0',
+	version: '{{ site.version }}',
 	stale: [
 		'/',
 		'/js/index.js',

@@ -2,7 +2,7 @@
 	{% include breadcrumb-nav.html category=page.category post=page %}
 </span>
 <article itemtype="http://schema.org/BlogPosting" itemscope="" itemprop="mainEntityOfPage" role="article" class="font-article">
-	<header class="article-meta shadow-dark background-accent color-alt">
+	<header class="article-meta background-accent color-alt">
 		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
 		{% if page.imgur %}
 			{% capture hash %}{{ include.url | replace: 'https://i.imgur.com/', '' | replace: 'https://imgur.com/', '' | replace: '.png', '' | replace: '.jpg', '' }}{% endcapture %}
