@@ -1,10 +1,12 @@
+---
+---
 {
-  "name": "",
-  "short_name": "",
-  "version": "1.0.0",
-  "start_url": "/",
-  "lang": "en",
-  "description": "",
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.shortName | default: site.title }}",
+  "version": "{{ site.version }}",
+  "start_url": "{{ site.base-uri | default: '/' }}",
+  "lang": "{{ site.lang | default: 'en' }}",
+  "description": "{{ site.description }}",
   "icons": [{
     "src": "/img/favicon.svg",
     "sizes": "any",
@@ -23,8 +25,8 @@
     "sizes": "wxh",
     "type": "image/*"
   }],
-  "theme_color": "#528ff9",
-  "background_color": "#fefefe",
+  "theme_color": "{{ site.theme-color | default: '#528ff9' }}",
+  "background_color": "{{ site.background-color | default: '#fefefe' }}",
   "display": "standalone",
   "developer": {
 		"name": "Chris Zuber",

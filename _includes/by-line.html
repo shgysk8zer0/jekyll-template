@@ -20,19 +20,19 @@
 		</summary>
 		<div class="big meta-author-links flex row">
 			{% if include.author.url %}
-			<a itemprop="url" href="{{ include.author.url }}" rel="external noopener" class="no-text-decoration">
-				{% include icon.html icon='web-browser' class=icon-class %}
-			</a>
+				<a itemprop="url" href="{{ include.author.url }}" rel="external noopener" class="no-text-decoration color-inherit">
+					{% include icon.html icon='web-browser' class=icon-class %}
+				</a>
 			{% endif %}
 			{% if include.author.github %}
-				<a itemprop="sameAs" href="https://github.com/{{ include.author.github }}" rel="external noopener" title="GitHub" class="no-text-decoration">
+				<a itemprop="sameAs" href="https://github.com/{{ include.author.github }}" rel="external noopener" title="GitHub" class="no-text-decoration color-inherit">
 					{% include icon.html icon='mark-github' class=icon-class %}
 				</a>
 			{% endif %}
 			{% if include.author.twitter %}
-			<a itemprop="sameAs" href="https://twitter.com/{{ include.author.twitter }}" rel="external noopener" title="Twitter" class="no-text-decoration">
-				{% include icon.html icon='twitter' class=icon-class %}
-			</a>
+				<a itemprop="sameAs" href="https://twitter.com/{{ include.author.twitter }}" rel="external noopener" title="Twitter" class="no-text-decoration">
+					{% include icon.html icon='twitter' class=icon-class %}
+				</a>
 			{% endif %}
 			{% if include.author.linkedin %}
 				<a itemprop="sameAs" href="https://www.linkedin.com/in/{{ include.author.linkedin }}/" rel="noopener external" title="LinkedIn" class="no-text-decoration">
