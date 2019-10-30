@@ -3,8 +3,10 @@
 	<details>
 		<summary>
 			<b>By</b>
-			<span itemprop="givenName">{{ include.author.givenName }}</span>
-			<span itemprop="familyName">{{ include.author.familyName }}</span>
+			<span itemprop="name">
+				<span itemprop="givenName">{{ include.author.givenName }}</span>
+				<span itemprop="familyName">{{ include.author.familyName }}</span>
+			</span>
 			{% if include.author.gravatar %}
 				<a href="https://secure.gravatar.com/{{ include.author.image.gravatar }}" title="Gravatar" rel="noopener external">
 					{% include gravatar.html

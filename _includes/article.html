@@ -1,12 +1,25 @@
 <span hidden="">
 	{% include breadcrumb-nav.html category=page.category post=page %}
 </span>
-<article itemtype="http://schema.org/BlogPosting" itemscope="" itemprop="mainEntityOfPage" role="article" class="font-article">
+<article itemtype="http://schema.org/{{ include.itemtype | default: 'Article' }}" role="article" class="font-article" itemscope="">
+	{% if page.publisher %}
+		<div itemprop="publisher" itemtype="https://schema.org/{{ include.publisher[@type] | default: 'Organization' }}" itemscope="" hidden="">
+			<meta itemprop="name" content="{{ include.publisher.name }}" />
+			{% if include.publisher.url %}<meta itemprop="url" content="{{ include.publisher.url }}" />{% endif %}
+			{% if include.publisher.logo %}
+				<div itemprop="logo" itemtype="https://schema.org/ImageObject" itemscope="" hidden="">
+					<meta itemprop="url" content="{{ include.publisher.logo.url }}" />
+				</div>
+			{% endif %}
+		</div>
+	{% endif %}
 	<header class="article-meta background-accent color-alt">
 		{% if page.tags %}<meta itemprop="keywords" content="{{ page.tags | join: ', '}}" />{% endif %}
-		{% if page.imgur %}
-			{% capture hash %}{{ include.url | replace: 'https://i.imgur.com/', '' | replace: 'https://imgur.com/', '' | replace: '.png', '' | replace: '.jpg', '' }}{% endcapture %}
-			<meta itemprop="image" content="https://i.imgur.com/{{ hash }}m.png" />
+		{% if page.thumbnail %}
+			<meta itemprop="image" content="{{ page.thumbnail }}" />
+		{% elsif page.imgur %}
+			{% capture hash %}{{ page.imgur | replace: 'https://i.imgur.com/', '' | replace: 'https://imgur.com/', '' | replace: '.png', '' | replace: '.jpg', '' }}{% endcapture %}
+			<meta itemprop="image" content="https://i.imgur.com/{{ hash }}l.png" />
 		{% elsif page.image %}
 			<meta itemprop="image" content="{{ page.image | absolute_url }}" />
 		{% endif %}
@@ -35,8 +48,8 @@
 					</div>
 					<hr />
 				{% endif %}
-				{% if page.author %}
-					{% include by-line.html author=page.author %}
+				{% if include.author %}
+					{% include by-line.html author=include.author %}
 				{% endif %}
 				{% if page.date %}
 					<b class="meta-date-posted">
