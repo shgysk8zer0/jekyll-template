@@ -51,7 +51,7 @@
     "build:all": "npm run build:js && npm run build:css && npm run build:icons",
     "build:css": "postcss ${npm_package_config_dir_css}index.css -o ${npm_package_config_dir_css}index.min.css",
     "build:js": "rollup --config",
-    "build:icons": "svg-sprite-generate -c icons.csv -o img/icons.svg",
+    "build:icons": "[[ -d 'img/adwaita-icons' && -f 'icons.csv' ]] && svg-sprite-generate -c icons.csv -o img/icons.svg",
     "fix:css": "stylelint ${npm_package_config_dir_css} --fix",
     "fix:js": "eslint ${npm_package_config_dir_js} --fix",
     "preinstall": "git submodule update --init --recursive",
