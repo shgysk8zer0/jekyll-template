@@ -37,7 +37,7 @@
   "homepage": "https://github.com/shgysk8zer0/jekyll-template",
   "scripts": {
     "git:fetch": "git fetch --prune --tags",
-    "git:submodules": "git submodule update --init --recursive",
+    "git:submodules": "if [[ -f '.gitmodules' ]] then; git submodule update --init --recursive; fi",
     "lint": "npm run lint:all",
     "lint:all": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint ${npm_package_config_dir_js}",
