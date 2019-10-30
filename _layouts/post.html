@@ -15,7 +15,7 @@ itemtype: 'https://schema.org/WebPage'
 	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
 	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
 	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
-	itemtype="{{ page.itemtype | default: layout.itemtype }}"
+	itemtype="{{ layout.itemtype }}"
 	prefix="og: http://ogp.me/ns#"
 	itemscope=""
 >
@@ -24,7 +24,7 @@ itemtype: 'https://schema.org/WebPage'
 		{% include header.html %}
 		{% include nav.html %}
 		<main id="main" class="card shadow">
-			{% include article.html %}
+			{% include article.html publisher=page.publisher author=page.author itemtype=page.itemtype %}
 		</main>
 		{% include sidebar.html recent-posts=5 %}
 		{% include footer.html %}

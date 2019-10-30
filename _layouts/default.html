@@ -17,7 +17,7 @@ pinned-posts: 5
 	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
 	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
 	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
-	itemtype="{{ page.itemtype | default: layout.itemtype }}"
+	itemtype="{{ layout.itemtype }}"
 	prefix="og: http://ogp.me/ns#"
 	itemscope=""
 >
