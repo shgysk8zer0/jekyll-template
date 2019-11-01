@@ -3,7 +3,7 @@
 'use strict';
 /*eslint no-undef: 0*/
 /* {{ site.time | date: data_to_xmlschema }} */
-self.importScripts('/sw-config.js');
+self.importScripts('/sw.config.js');
 
 self.addEventListener('install', async event => {
 	event.waitUntil((async () => {
