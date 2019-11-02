@@ -3,6 +3,7 @@ name: default
 theme: default
 og-type: website
 itemtype: 'https://schema.org/WebPage'
+sidebar: true
 recent-posts: 5
 pinned-posts: 5
 ---
@@ -13,7 +14,7 @@ pinned-posts: 5
 	class="no-js border-box smooth-scroll"
 	data-theme="{{ page.theme | default: layout.theme }}"
 	data-layout="{{ layout.name }}"
-	{% if site.service_worker %}data-service-worker="{{site.service_worker }}"{% endif %}
+	{% if site.service_worker %}data-service-worker="{{ site.service_worker }}"{% endif %}
 	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
 	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
 	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
@@ -28,7 +29,7 @@ pinned-posts: 5
 		<main id="main" class="card shadow">
 			{{ content }}
 		</main>
-		{% include sidebar.html recent-posts=5 pinned-posts=5 %}
+		{% if layout.sidebar %}{% include sidebar.html recent-posts=5 pinned-posts=5 %}{% endif %}
 		{% include footer.html %}
 		{% include share-button.html %}
 	</body>

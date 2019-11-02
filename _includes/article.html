@@ -89,7 +89,7 @@
 		</details>
 	</header>
 	{% if page.subheading %}{% include subheading.html subheading=page.subheading %}{% endif %}
-	<div itemprop="articleBody mainEntityOfPage" class="optimize-legibility">{{ content }}</div>
+	<div itemprop="articleBody mainEntityOfPage" class="optimize-legibility"{% if include.columns %} data-columns="{{ include.columns }}"{% endif %}>{{ content }}</div>
 	<footer class="clearfix relative">
 		{% if page.ads and site.ad-sense %}{% include ad.html %}{% endif %}
 		{% if jekyll.environment == 'production' and  page.comments and site.discus-identifier %}{% include disqus.html %}{% endif %}
