@@ -1,33 +1,13 @@
 ---
-name: post
+name: right-sidebar
 theme: default
+layout: default
 og-type: website
 itemtype: 'https://schema.org/WebPage'
 ---
-<!DOCTYPE html>
-<html
-	lang="{{ site.lang }}"
-	dir="{{ site.dir }}"
-	class="no-js border-box smooth-scroll"
-	data-theme="{{ page.theme | default: layout.theme }}"
-	data-layout="right-sidebar"
-	{% if site.service_worker %}data-service-worker="{{site.service_worker }}"{% endif %}
-	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
-	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
-	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
-	itemtype="{{ layout.itemtype }}"
-	prefix="og: http://ogp.me/ns#"
-	itemscope=""
->
-	{% include head.html %}
-	<body id="top" class="grid font-main background-primary color-default overflow-x-hidden">
-		{% include header.html %}
-		{% include nav.html %}
-		<main id="main" class="card shadow">
-			{% include article.html publisher=page.publisher author=page.author itemtype=page.itemtype %}
-		</main>
-		{% include sidebar.html recent-posts=5 %}
-		{% include footer.html %}
-		{% include share-button.html %}
-	</body>
-</html>
+{% include article.html
+	publisher = page.publisher
+	author    = page.author
+	itemtype  = page.itemtype
+	columns   = page.columns
+%}
