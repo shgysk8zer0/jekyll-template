@@ -10,7 +10,7 @@
   [headers.values]
     Link = '''
       </css/index.css>; rel=preload; as=style, \
-      </css/js/index.js>; rel=preload; as=script, \
+      </js/index.js>; rel=preload; as=script, \
       </img/icons.svg>; rel=preload; as=image
     '''
     X-Frame-Options = "DENY"
@@ -21,19 +21,19 @@
     Content-Security-Policy = '''
       default-src 'self';
       base-uri 'self';
-      img-src *;
-      script-src 'self' https://cdn.kernvalley.us;
-      style-src 'self' 'unsafe-inline' https://cdn.kernvalley.us;
-      connect-src 'self' https://cdn.kernvalley.us https://api.kernvalley.us  https://baconipsum.com/;
-      worker-src: 'self';
-      font-src 'self' https://cdn.kernvalley.us;
+      img-src 'self' https://i.imgur.com https://secure.gravatar.com https://maps.wikimedia.org/osm-intl/;
+      script-src 'self' moz-extension: https://cdn.kernvalley.us https://unpkg.com/ https://www.google-analytics.com/ https://www.googletagmanager.com https://polyfill.io/v3/ https://www.youtube.com/ https://www.youtube-nocookie.com/;
+      style-src 'self' 'unsafe-inline' https://cdn.kernvalley.us https://unpkg.com/ https://fonts.googleapis.com/ https://www.youtube.com/ https://www.youtube-nocookie.com/;
+      connect-src 'self' https://cdn.kernvalley.us https://api.kernvalley.us https://unpkg.com/ https://polyfill.io/v3/ https://www.google-analytics.com/ https://www.googletagmanager.com/ https://i.imgur.com https://secure.gravatar.com https://maps.wikimedia.org/osm-intl/ https://fonts.gstatic.com/  https://fonts.googleapis.com/;
+      font-src 'self' https://cdn.kernvalley.us https://fonts.gstatic.com/;
       media-src 'none';
-      child-src 'self';
+      frame-src https://www.youtube.com https://www.youtube-nocookie.com https://disqus.com;
       object-src: 'none';
+      worker-src: 'self';
       manifest-src 'self';
       form-action 'self';
       reflected-xss block;
-      report-uri https://api.kernvalley.us/Errors/CSP/
+      report-uri https://api.kernvalley.us/Errors/CSP/;
       block-all-mixed-content;
       upgrade-insecure-requests;
       disown-opener;'''
