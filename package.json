@@ -43,8 +43,8 @@
     "lint:js": "eslint ${npm_package_config_dir_js}",
     "lint:css": "stylelint ${npm_package_config_dir_css}",
     "test": "npm run lint",
-    "start": "npm run netlify:serve",
-    "build": "npm run build:icons",
+    "start": "npm run netlify",
+    "build": "npm run build:icons && npm run build:css && npm run build:js",
     "build:site": "JEKYLL_ENV=production bundle exec jekyll build",
     "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --strict_front_matter",
     "postinstall": "npm run build",
@@ -57,34 +57,36 @@
     "preinstall": "git submodule update --init --recursive",
     "serve:production": "npm run build && JEKYLL_ENV=production bundle exec jekyll serve",
     "serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter",
+    "netlify": "if [ -f '.netlify/state.json' ]; then npm run netlify:live; else npm run netlify:serve; fi",
     "netlify:deploy": "netlify deploy",
     "netlify:serve": "netlify dev",
-    "netlify:live": "netlify dev --live"
+    "netlify:live": "netlify dev --live",
+    "netlify:link": "netlify link"
   },
   "dependencies": {
     "svg-sprite-generator": "0.0.7"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.1.0",
     "cssnano": "^4.1.10",
     "cssnano-preset-default": "^4.0.7",
     "eslint": "^5.16.0",
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-babel": "^5.3.0",
-    "netlify-cli": "^2.19.3",
-    "postcss": "^7.0.20",
+    "netlify-cli": "^2.48.0",
+    "postcss": "^7.0.27",
     "postcss-cli": "^6.1.3",
     "postcss-cssnext": "^3.1.0",
     "postcss-discard-comments": "^4.0.2",
     "postcss-import": "^12.0.1",
     "postcss-import-url": "^4.0.0",
     "postcss-url": "^8.0.0",
-    "rollup": "^1.25.2",
-    "rollup-plugin-terser": "^5.1.2",
+    "rollup": "^1.32.1",
+    "rollup-plugin-terser": "^5.3.0",
     "rollup-plugin-url-resolve": "^0.1.1",
     "stylelint": "^10.0.1",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-standard": "^18.3.0",
-    "svgo": "^1.2.2"
+    "svgo": "^1.3.2"
   }
 }
