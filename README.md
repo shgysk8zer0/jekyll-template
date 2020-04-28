@@ -5,10 +5,10 @@ A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts,
 [![GitHub Actions Status](https://github.com/shgysk8zer0/static-template/workflows/Node%20CI/badge.svg)](https://github.com/shgysk8zer0/static-template/actions)
 
 [![GitHub license](https://img.shields.io/github/license/shgysk8zer0/jekyll-template.svg)](https://github.com/shgysk8zer0/jekyll-template/blob/master/LICENSE)
-![GitHub last commit](https://img.shields.io/github/last-commit/shgysk8zer0/jekyll-template.svg)
 [![GitHub issues](https://img.shields.io/github/issues/shgysk8zer0/jekyll-template.svg)](https://github.com/shgysk8zer0/jekyll-template/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/shgysk8zer0/jekyll-template.svg)](https://github.com/shgysk8zer0/jekyll-template/pulls)
-![GitHub release](https://img.shields.io/github/release/shgysk8zer0/jekyll-template.svg)
+[![GitHub last commit](https://img.shields.io/github/last-commit/shgysk8zer0/jekyll-template.svg)](https://github.com/shgysk8zer0/jekyll-template/commits/master)
+[![GitHub release](https://img.shields.io/github/release/shgysk8zer0/jekyll-template.svg)](https://github.com/shgysk8zer0/jekyll-template/releases)
 
 ![GitHub followers](https://img.shields.io/github/followers/shgysk8zer0.svg?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/shgysk8zer0/jekyll-template.svg?style=social)
@@ -16,8 +16,8 @@ A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts,
 ![Twitter Follow](https://img.shields.io/twitter/follow/shgysk8zer0.svg?style=social)
 
 [![Donate using Liberapay](https://img.shields.io/liberapay/receives/shgysk8zer0.svg?logo=liberapay)](https://liberapay.com/shgysk8zer0/donate "Donate using Liberapay")
-![Keybase PGP](https://img.shields.io/keybase/pgp/shgysk8zer0.svg)
 ![Keybase BTC](https://img.shields.io/keybase/btc/shgysk8zer0.svg)
+![Keybase PGP](https://img.shields.io/keybase/pgp/shgysk8zer0.svg)
 - - - 
 
 - [Code of Conduct](./.github/CODE_OF_CONDUCT.md)
