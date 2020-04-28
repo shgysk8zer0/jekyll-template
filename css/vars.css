@@ -1,4 +1,4 @@
 :root {
 	--scrollbar-track: var(--primary-color);
-	--scrollbar-background: var(--accent-color);
+	--scrollbar-color: var(--accent-color);
 }
