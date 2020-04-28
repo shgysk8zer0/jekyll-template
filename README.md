@@ -13,7 +13,7 @@ A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts,
 ![GitHub followers](https://img.shields.io/github/followers/shgysk8zer0.svg?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/shgysk8zer0/jekyll-template.svg?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/shgysk8zer0/jekyll-template.svg?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/shgysk8zer0.svg?style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/shgysk8zer0.svg?style=social)](https://twitter.com/shgysk8zer0)
 
 [![Donate using Liberapay](https://img.shields.io/liberapay/receives/shgysk8zer0.svg?logo=liberapay)](https://liberapay.com/shgysk8zer0/donate "Donate using Liberapay")
 ![Keybase BTC](https://img.shields.io/keybase/btc/shgysk8zer0.svg)
