@@ -9,7 +9,7 @@
 	<meta itemprop="keywords" content="{{ page.tags | join: ', ' }}" />
 	<meta name="referrer" content="{{ page.referrer | default: site.referrer }}"/>
 	<meta name="mobile-web-app-capable" content="yes" />
-	<meta itemprop="thumbnailUrl" content="{{{ page.thumbnail.url | default: site.thumbnail.url }}" />
+	<meta itemprop="thumbnailUrl" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
 	<!-- Social data -->
 	<!-- Facebook | OpenGraph -->
 	<meta property="og:type" content="{{ page.og-type | default: layout.og-type }}" />
@@ -26,7 +26,7 @@
 	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:creator" content="" />
 	<meta name="twitter:description" content="{{ page.description }}" />
-	<meta name="twitter:image" content="{{{ page.thumbnail.url | default: site.thumbnail.url }}" />
+	<meta name="twitter:image" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
 	<!-- /Twitter -->
 	<!-- /Social data -->
 	<meta name="msapplication-TileColor" content="{{ site.theme-color | default: '#528ff9' }}" />
@@ -46,14 +46,14 @@
 	{% endif %}
 	<title itemprop="headline">{{ page.title | default: 'Home' }} | {{ site.title }}</title>
 	{% if site.scripts %}{% for script in site.scripts[jekyll.environment] %}
-		{% include script.html src=script.src type=script.type crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
 	{% endfor %}{% endif %}
 	<!-- <script type="module" src="/js/index.js" async=""></script> -->
 	{% if layout.scripts %}{% for script in layout.scripts %}
-		{% include script.html src=script.src type=script.type crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
 	{% endfor %}{% endif %}
 	{% if page.scripts %}{% for script in page.scripts %}
-		{% include script.html src=script.src type=script.type crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
 	{% endfor %}{% endif %}
 	<link rel="manifest" href="{{ site.manifest }}" />
 	<link rel="license" href="/LICENSE" />
