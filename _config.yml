@@ -51,9 +51,6 @@ background-color: '#242424'
 #   bing:
 scripts:
   development:
-  - src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
-    type: text/javascript
-    crossorigin: anonymous
   - src: /js/index.js
     type: module
     async: true
@@ -61,15 +58,14 @@ scripts:
   - src: 'https://cdn.polyfill.io/v2/polyfill.min.js'
     type: text/javascript
     crossorigin: anonymous
-  - src: /js/index.js
-    type: module
+  - src: /js/index.min.js
     async: true
 stylesheets:
   development:
   - href: /css/index.css
     media: all
   production:
-  - href: /css/index.css
+  - href: /css/index.min.css
     media: all
 preload:
 - href: /img/icons.svg

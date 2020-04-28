@@ -1,6 +1,4 @@
----
----
 :root {
-	background: {{ site.data.theme.dark.background }};
-	color: {{ site.theme-color }};
+	--scrollbar-track: var(--primary-color);
+	--scrollbar-background: var(--accent-color);
 }
