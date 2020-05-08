@@ -55,7 +55,9 @@
 	{% if page.scripts %}{% for script in page.scripts %}
 		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossorigin integrity=script.integrity nomodule=script.nomodule %}
 	{% endfor %}{% endif %}
-	<link rel="manifest" href="{{ site.manifest }}" />
+	{% if site.manifest %}
+		<link rel="manifest" href="{{ site.manifest }}" />
+	{% endif %}
 	<link rel="license" href="/LICENSE" />
 	<link rel="icon" href="/img/favicon.svg" type="image/svg+xml" sizes="any" />
 	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />

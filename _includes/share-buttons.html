@@ -1,0 +1,39 @@
+<div class="share-btns">
+	<h4>{{ include.heading | default: 'Share on&hellip;' }}</h4>
+	{% if include.facebook %}
+		<share-to-button target="facebook" class="custom-element share-target if-defined" text="{{ include.text }}" url="{{ include.url | default: page.url }}" title="Share on Facebook">
+				<span slot="text">
+					<span>{{ include.facebook_text | default: 'Facebook' }}</span>
+				</span>
+		</share-to-button>
+	{% endif %}
+	{% if include.twitter %}
+		<share-to-button target="twitter" class="custom-element share-target if-defined" text="{{ include.text }}" url="{{ include.url | default: page.url }}" title="Share on Twitter">
+				<span slot="text">
+					<span>{{ include.twitter_text | default: 'Twitter' }}</span>
+				</span>
+		</share-to-button>
+	{% endif %}
+	{% if include.reddit %}
+		<share-to-button target="reddit" class="custom-element share-target if-defined" text="{{ include.text }}" url="{{ include.url | default: page.url }}" title="Share on Reddit">
+			<span slot="text">
+				<span>{{ include.reddit_text | default: 'Reddit' }}</span>
+			</span>
+		</share-to-button>
+	{% endif %}
+	{% if include.linkedin %}
+		<share-to-button target="linkedin" class="custom-element share-target if-defined" text="{{ include.text }}" url="{{ include.url | default: page.url }}" title="Share on LinkedIn">
+			<span slot="text">
+				<span>{{ include.linkedin_text | default: 'LinkedIn' }}</span>
+			</span>
+		</share-to-button>
+	{% endif %}
+	{% if include.clipboard %}
+		<share-to-button target="clipboard" class="custom-element share-target if-defined" text="{{ include.text }}" url="{{ include.url | default: page.url }}" title="Copy to Clipboard">
+			<span slot="text">
+				<span>{{ include.clipboard_text | default: 'Copy' }}</span>
+			</span>
+		</share-to-button>
+	{% endif %}
+	<hr />
+</div>
