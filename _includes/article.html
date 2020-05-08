@@ -89,6 +89,13 @@
 		</details>
 	</header>
 	{% if page.subheading %}{% include subheading.html subheading=page.subheading %}{% endif %}
+	{% if include.share != false %}{% include share-buttons.html
+		facebook=true
+		twitter=true
+		reddit=true
+		linkedin=true
+		text=include.description
+	%}{% endif %}
 	<div itemprop="articleBody mainEntityOfPage" class="optimize-legibility"{% if include.columns %} data-columns="{{ include.columns }}"{% endif %}>{{ content }}</div>
 	<footer class="clearfix relative">
 		{% if page.ads and site.ad-sense %}{% include ad.html %}{% endif %}

@@ -48,7 +48,6 @@
     "build:site": "JEKYLL_ENV=production bundle exec jekyll build",
     "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --strict_front_matter",
     "postinstall": "npm run build",
-    "build:all": "npm run build:js && npm run build:css && npm run build:icons",
     "build:css": "if [ -f 'postcss.config.js' ]; then postcss ${npm_package_config_dir_css}index.css -o ${npm_package_config_dir_css}index.min.css; fi",
     "build:js": "if [ -f 'rollup.config.js' ]; then rollup --config; fi",
     "build:icons": "if [ -f 'icons.csv' ]; then $(svg-sprite-generate -c 'icons.csv' -o 'img/icons.svg'); fi",
