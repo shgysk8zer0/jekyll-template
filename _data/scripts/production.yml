@@ -1,0 +1,5 @@
+- src: 'https://cdn.polyfill.io/v3/polyfill.min.js'
+  type: text/javascript
+  crossorigin: anonymous
+- src: /js/index.min.js
+  async: true

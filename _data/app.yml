@@ -1,0 +1,37 @@
+name: Jekyll Template
+shortName: Template
+version: 1.0.0
+icons-file: /img/icons.svg
+theme:
+  color: '#528ff9'
+  background: '#242424'
+icons:
+- href: /img/favicon.svg
+  type: image/svg+xml
+  sizes: any
+- href: /img/apple-touch-icon.png
+  rel: apple-touch-icon
+  type: image/png
+  sizes: 180x180
+- href: /img/icon-512.png
+  type: image/png
+  sizes: 512x512
+- href: /img/icon-192.png
+  type: image/png
+  sizes: 192x192
+- href: /img/icon-32.png
+  type: image/png
+  sizes: 32x32
+- href: /img/icon-16.png
+  type: image/png
+  sizes: 16x16
+screenshots:
+- src: 'https://i.imgur.com/uRKaQQQl.png'
+  sizes: 640x354
+  type: image/png
+
+
+# <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" sizes="any" />
+# <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+# <link rel="icon" type="image/png" sizes="32x32" href="/img/icon-32.png" />
+# <link rel="icon" type="image/png" sizes="16x16" href="/img/icon-16.png" />

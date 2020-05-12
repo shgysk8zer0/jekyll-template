@@ -1,10 +1,10 @@
 ---
 layout: null
 ---
-	'use strict';
+'use strict';
 /*eslint no-unused-vars: 0*/
 const config = {
-	version: '{{ site.version }}',
+	version: '{{ site.app.version | default: site.version }}',
 	fresh: [
 		/* Root document */
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
