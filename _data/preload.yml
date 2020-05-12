@@ -1,0 +1,5 @@
+- href: 'https://cdn.kernvalley.us/components/github/user.html'
+  as: fetch
+  type: text/html
+  crossorigin: anonymous
+  referrerPolicy: origin-when-crossorigin

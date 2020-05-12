@@ -1,4 +1,5 @@
 :root {
 	--scrollbar-track: var(--primary-color);
 	--scrollbar-color: var(--accent-color);
+	--map-width: 100%;
 }

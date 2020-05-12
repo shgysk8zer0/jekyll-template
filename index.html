@@ -2,6 +2,8 @@
 layout: default
 title: Home
 pinned: true
+prerender:
+- href: /posts/2019/10/29/test/
 ---
 <section class="pagination">
 	<div class="grid grid-gallery">
@@ -11,8 +13,8 @@ pinned: true
 			</div>
 		{% endfor %}
 	</div>
-	<footer class="paginate-nav">
-		{% if paginator.previous_page or paginator.next_page %}
+	{% if paginator.previous_page or paginator.next_page %}
+		<footer class="paginate-nav">
 			{% if paginator.previous_page %}
 				<a href="{{ paginator.previous_page_path  }}" rel="prev" role="button" title="Previous page">
 					{% include icon.html icon='prev' %}
@@ -23,6 +25,6 @@ pinned: true
 					{% include icon.html icon='next' %}
 				</a>
 			{% endif %}
-		{% endif %}
-	</footer>
+		</footer>
+	{% endif %}
 </section>

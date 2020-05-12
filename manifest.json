@@ -1,35 +1,19 @@
 ---
 ---
 {
-  "name": "{{ site.title }}",
-  "short_name": "{{ site.shortName | default: site.title }}",
-  "version": "{{ site.version }}",
+  "name": "{{ site.data.app.name | default: site.title }}",
+  "short_name": "{{ site.data.app.shortName | default: site.title }}",
+  "version": "{{ site.data.app.version | default: site.version }}",
   "start_url": "{{ site.base-uri | default: '/' }}",
   "lang": "{{ site.lang | default: 'en' }}",
-  "description": "{{ site.description }}",
-  "icons": [{
-    "src": "/img/favicon.svg",
-    "sizes": "any",
-    "type": "image/svg+xml"
-  }, {
-    "src": "/img/icon-192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }, {
-    "src": "/img/icon-512.png",
-    "sizes": "512x512",
-    "type": "image/png"
-  }],
-  "screenshots": [{
-    "src": "url",
-    "sizes": "wxh",
-    "type": "image/*"
-  }],
-  "theme_color": "{{ site.theme-color | default: '#528ff9' }}",
-  "background_color": "{{ site.background-color | default: '#fefefe' }}",
-  "display": "standalone",
+  "description": "{{ site.data.app.description | default: site.description }}",
+  "icons": {{ site.data.app.icons | jsonify }},
+  "screenshots": {{ site.data.app.screenshots | jsonify }},
+  "theme_color": "{{ site.data.app.theme.color | default: '#528ff9' }}",
+  "background_color": "{{ site.data.app.theme.background | default: '#fefefe' }}",
+  "display": "{{ site.data.app.display | default: 'standalone' }}",
   "developer": {
 		"name": "Chris Zuber",
-		"url": "http://shgysk8zer0.github.io"
+		"url": "https://shgysk8zer0.github.io"
 	}
 }
