@@ -65,22 +65,22 @@
 	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="{{ site.data.app.theme.color | default: '#528ff9' }}" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	{% if site.data.preload %}{% for link in site.data.preload %}
-		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'image' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
+		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
 	{% if layout.preload %}{% for link in layout.preload %}
-		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'image' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}"  importance="{{ link.importance | default: 'auto' }}" />
+		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}"  importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
 	{% if page.preload %}{% for link in page.preload %}
-		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'image' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
+		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
 	{% if site.data.prefetch %}{% for link in site.data.prefetch %}
-		<link rel="prefetch" href="{{ link.href }}" as="{{ link.as | default: 'image' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
+		<link rel="prefetch" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
 	{% if layout.prefetch %}{% for link in layout.prefetch %}
-		<link rel="prefetch" href="{{ link.href }}" as="{{ link.as | default: 'image' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}"  importance="{{ link.importance | default: 'auto' }}" />
+		<link rel="prefetch" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}"  importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
 	{% if page.prefetch %}{% for link in page.prefetch %}
-		<link rel="prefetch" href="{{ link.href }}" as="{{ link.as | default: 'image' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
+		<link rel="prefetch" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
 	{% if site.data.dns-prefetch %}{% for link in site.data.dns-prefetch %}
 		<link rel="dns-prefetch" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
