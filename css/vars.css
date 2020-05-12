@@ -1,9 +1,4 @@
----
-layout: null
----
 :root {
-	--accent-color-dark: {{ site.data.app.theme.color }};
-	--accent-color-light: {{ site.data.app.theme.color }};
 	--scrollbar-track: var(--primary-color);
 	--scrollbar-color: var(--accent-color);
 	--map-width: 100%;
