@@ -1,5 +1,5 @@
 <button type="button" is="share-button" class="{{ include.class | default: 'round shadow fixed z-4' }}" aria-label="Share" aria-hidden="true" title="{{ include.title | default: page.title }}" text="{{ include.text | default: page.description }}" url="{{ include.url | default: page.url | absolute_url }}">
-	<svg class="current-color icon">
+	<svg class="current-color icon" role="img" aria-hidden="true">
 		<use xlink:href="{{ site.icons }}#{{ include.icon | default: 'public-share' }}"></use>
 	</svg>
 </button>
