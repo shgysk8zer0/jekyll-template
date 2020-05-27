@@ -4,7 +4,7 @@
   publish = "./_site/"
   command = "npm run build && npm run build:site"
   [build.environment]
-    GIT_LFS_ENABLED = "1"
+    GIT_LFS_ENABLED = true
 [[headers]]
   for="/*"
   [headers.values]
