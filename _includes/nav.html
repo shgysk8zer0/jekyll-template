@@ -1,7 +1,12 @@
-<nav id="nav" class="sticky top shadow background-accent color-alt z-3 clearfix">
-	{% if page.url != '/' %}
-		<a href="{{ '/' }}" rel="bookmark" title="Home" class="color-inherit" title="Home">
-			{% include icon.html icon='logo' class='current-color icon' %}
+<nav id="nav" class="sticky top shadow background-accent color-alt z-3 flex row nowrap">
+	{% for link in site.data.nav-links %}
+		<a href="{{ link.href }}" class="nav-link center inline-block{% if link.href == page.url %} active no-pointer-events{% endif %}" title="{{ link.label }}">
+			{% include icon.html icon=link.icon %}
+			<br />
+			<span class="nav-link-label">{{ link.label }}</span>
 		</a>
-	{% endif %}
+		{% if site.service_worker %}
+			<button is="pwa-install" class="btn btn-primary" src="{{ site.service_worker }}" scope="/" title="Install Web App" reloadonupdate="" hidden="">Install</button>
+		{% endif %}
+	{% endfor %}
 </nav>

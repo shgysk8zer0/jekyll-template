@@ -20,11 +20,11 @@ const config = {
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.html',
 		'https://cdn.kernvalley.us/components/slide-show/slide-show.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
+		'https://cdn.kernvalley.us/components/spotify/player.html',
 
 		/* JS, `customElements`, etc. */
 		'https://polyfill.io/v3/polyfill.min.js',
 		'https://unpkg.com/@webcomponents/custom-elements@1.4.1/custom-elements.min.js',
-
 
 		/* CSS */
 		'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css',

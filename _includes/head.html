@@ -21,10 +21,15 @@
 	{% if site.facebook-id %}
 		<meta property="og:app_id" content="{{ site.facebook-id }}" />
 	{% endif %}
+	{% if site.facebook-site-name %}
+		<meta name="og:site_name" content="{{ site.facebook-site-name }}" />
+	{% endif %}
 	<!-- /Facebook | OpenGraph -->
 	<!-- Twitter -->
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:creator" content="" />
+	<meta name="twitter:card" content="{{ page.twitter_card | default: 'summary' }}" />
+	{% if page.twitter_creator %}
+		<meta name="twitter:creator" content="{{ page.twitter_creator}}" />
+	{% endif %}
 	<meta name="twitter:description" content="{{ page.description }}" />
 	<meta name="twitter:image" content="{{ page.thumbnail.url | default: site.thumbnail.url }}" />
 	<!-- /Twitter -->
@@ -98,7 +103,7 @@
 		<link rel="preconnect" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
 	{% endfor %}{% endif %}
 	{% if page.preconnect %}{% for link in page.preconnect %}
-		<link rel="dns-prefetch" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
+		<link rel="preconnect" href="{{ link.href }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" />
 	{% endfor %}{% endif %}
 	{% if page.prerender %}{% for link in page.prerender %}
 			<link rel="prerender" href="{{ link.href }}" />
