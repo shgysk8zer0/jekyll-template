@@ -1,3 +1,3 @@
-- src: /js/index.js
-  type: module
+- src: /js/index.min.js
+  # type: module
   async: true
