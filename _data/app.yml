@@ -1,6 +1,6 @@
 name: Jekyll Template
 shortName: Jekyll Template
-version: 1.0.4
+version: 1.0.1
 display: standalone
 description: "A GitHub repository for easily creating fast, modern, PWA compatible websites"
 icons-file: /img/icons.svg
@@ -31,3 +31,6 @@ screenshots:
 - src: 'https://i.imgur.com/uRKaQQQl.png'
   sizes: 640x354
   type: image/png
+related_applications: []
+features: []
+categories: []
