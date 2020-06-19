@@ -2,7 +2,8 @@
 A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/252539d1-4596-41e9-9d63-97a964822b25/deploy-status)](https://app.netlify.com/sites/infallible-galileo-ac41ee/deploys)
-[![GitHub Actions Status](https://github.com/shgysk8zer0/static-template/workflows/Node%20CI/badge.svg)](https://github.com/shgysk8zer0/static-template/actions)
+[![Node CI](https://github.com/shgysk8zer0/static-template/workflows/Node%20CI/badge.svg)](https://github.com/shgysk8zer0/static-template/actions)
+![Super Linter](https://github.com/shgysk8zer0/jekyll-template/workflows/Lint%20Code%20Base/badge.svg)
 
 [![GitHub license](https://img.shields.io/github/license/shgysk8zer0/jekyll-template.svg)](https://github.com/shgysk8zer0/jekyll-template/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/shgysk8zer0/jekyll-template.svg)](https://github.com/shgysk8zer0/jekyll-template/issues)
@@ -18,7 +19,7 @@ A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts,
 [![Donate using Liberapay](https://img.shields.io/liberapay/receives/shgysk8zer0.svg?logo=liberapay)](https://liberapay.com/shgysk8zer0/donate "Donate using Liberapay")
 ![Keybase BTC](https://img.shields.io/keybase/btc/shgysk8zer0.svg)
 ![Keybase PGP](https://img.shields.io/keybase/pgp/shgysk8zer0.svg)
-- - - 
+- - -
 
 - [Code of Conduct](./.github/CODE_OF_CONDUCT.md)
 - [Contributing](./.github/CONTRIBUTING.md)
