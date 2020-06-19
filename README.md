@@ -18,7 +18,7 @@ A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts,
 [![Donate using Liberapay](https://img.shields.io/liberapay/receives/shgysk8zer0.svg?logo=liberapay)](https://liberapay.com/shgysk8zer0/donate "Donate using Liberapay")
 ![Keybase BTC](https://img.shields.io/keybase/btc/shgysk8zer0.svg)
 ![Keybase PGP](https://img.shields.io/keybase/pgp/shgysk8zer0.svg)
-- - - 
+- - -
 
 - [Code of Conduct](./.github/CODE_OF_CONDUCT.md)
 - [Contributing](./.github/CONTRIBUTING.md)
