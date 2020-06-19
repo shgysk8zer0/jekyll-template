@@ -11,10 +11,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Include Changelog
 - Implement GitHub's Super Linter
 - Add `<pwa-install>` and `<pwa-prompt>`
+- Add missing fields (event if empty) for app data / config file
 
 ### Changed
 - Use `<pwa-install>` instead of `data-service-worker` attribute
 - Move most data from `_config.yml` to `/_data/*`
+- Update Pull Request Template
 
 ### Fixed
 - Accessibility of `<button is="share-button">`
