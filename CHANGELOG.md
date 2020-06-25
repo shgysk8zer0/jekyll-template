@@ -6,7 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 <!-- markdownlint-disable -->
+## [1.0.3] 2020-06-25
+
+### Added
+- Dependabot config
+
 ## [1.0.2] 2020-06-19
+
 ### Changed
 - Disabled markdown linting of releases section in `CHANGELOG.md`
 
