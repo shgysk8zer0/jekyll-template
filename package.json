@@ -53,7 +53,7 @@
     "build:site:dev": "bundle exec jekyll build --drafts --unpublished --future --profile --trace --strict_front_matter",
     "build:css": "if [ -f 'postcss.config.js' ]; then postcss ${npm_package_config_dir_css}index.css -o ${npm_package_config_dir_css}index.min.css; fi",
     "build:js": "if [ -f 'rollup.config.js' ]; then rollup --config; fi",
-    "build:icons": "if [ -f '${npm_package_config_icons}' ]; then $(svg-sprite-generate -c '${npm_package_config_icons}' -o 'img/icons.svg'); fi",
+    "build:icons": "if [ -f ${npm_package_config_icons} ]; then $(svg-sprite-generate -c ${npm_package_config_icons} -o 'img/icons.svg'); fi",
     "serve:production": "npm run build && JEKYLL_ENV=production bundle exec jekyll serve",
     "serve:dev": "bundle exec jekyll serve --drafts --unpublished --future --profile --trace --strict_front_matter",
     "netlify": "if [ -f '.netlify/state.json' ]; then npm run netlify:live; else npm run netlify:serve; fi",
