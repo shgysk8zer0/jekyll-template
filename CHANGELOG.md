@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+<!-- markdownlint-disable -->
+## [v1.0.5] 2020-06-26
+
+### Changed
+- Merge more Dependabot pull requests
+- Update Ruby version to 2.7.1
 
 ## [v1.0.4] 2020-06-26
 
@@ -15,14 +21,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update all dependencies (merges serveral pull requests)
 - Misc. other updates using `npm audit fix`
 - Switch to new V2 of Dependanbot syntax
+- Use full `document.title` in share button by default
 
 ### Fixed
 - `build:icons` script by unquoting `${npm_package_config_icons}`
+- Use unminified version of stylesheet for development environment
+- Do not use `absolute_url` for URL in share button
 
 ### Removed
 - Disable Git submodules for dependabot (template has no submodules)
 
-<!-- markdownlint-disable -->
 ## [1.0.3] 2020-06-25
 
 ### Added

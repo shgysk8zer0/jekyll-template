@@ -9,7 +9,7 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.8.7"
+gem "jekyll", "4.1.1"
 # gem "jekyll-github-metadata", "~> 1.0"
 gem 'jekyll-gist', '~> 1.4', '>= 1.4.1'
 gem 'jekyll-youtube', '~> 1.0'
@@ -31,7 +31,7 @@ gem "jekyll-paginate", "~> 1.1"
 # end
 
 # Added at 2018-01-18 18:00:06 -0800 by shgysk8zer0:
-gem "jekyll-admin", "~> 0.9.0"
+gem "jekyll-admin", "~> 0.10.1"
 
 # Added at 2018-01-18 18:44:06 -0800 by shgysk8zer0:
 # gem "jekyll-octicons", "~> 4.2"
