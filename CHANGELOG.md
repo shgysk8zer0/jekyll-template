@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update all dependencies (merges serveral pull requests)
+- Misc. other updates using `npm audit fix`
 - Switch to new V2 of Dependanbot syntax
 
 ### Fixed
