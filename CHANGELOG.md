@@ -6,10 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v1.0.4]
+## [v1.0.4] 2020-06-26
 
 ### Added
 - Dependabot badge
+
+### Changed
+- Update all dependencies (merges serveral pull requests)
+- Misc. other updates using `npm audit fix`
+- Switch to new V2 of Dependanbot syntax
+
+### Fixed
+- `build:icons` script by unquoting `${npm_package_config_icons}`
 
 ### Removed
 - Disable Git submodules for dependabot (template has no submodules)
