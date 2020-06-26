@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Merge more Dependabot pull requests
+- Update Ruby version to 2.7.1
 
 ## [v1.0.4] 2020-06-26
 
