@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - `build:icons` script by unquoting `${npm_package_config_icons}`
+- Use unminified version of stylesheet for development environment
 
 ### Removed
 - Disable Git submodules for dependabot (template has no submodules)
