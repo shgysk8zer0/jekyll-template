@@ -1,4 +1,5 @@
 # Jekyll stuff
+.jekyll-cache/
 /_site/*
 !/_site/.gitkeep
 *.sql
