@@ -21,10 +21,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update all dependencies (merges serveral pull requests)
 - Misc. other updates using `npm audit fix`
 - Switch to new V2 of Dependanbot syntax
+- Use full `document.title` in share button by default
 
 ### Fixed
 - `build:icons` script by unquoting `${npm_package_config_icons}`
 - Use unminified version of stylesheet for development environment
+- Do not use `absolute_url` for URL in share button
 
 ### Removed
 - Disable Git submodules for dependabot (template has no submodules)
