@@ -1,8 +1,8 @@
 # jekyll-template
 A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc.
 
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=shgysk8zer0/jekyll-template)](https://dependabot.com)
-[![Node CI](https://github.com/shgysk8zer0/static-template/workflows/Node%20CI/badge.svg)](https://github.com/shgysk8zer0/static-template/actions)
+<!-- [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=shgysk8zer0/jekyll-template)](https://dependabot.com) -->
+[![Node CI](https://github.com/shgysk8zer0/jekyll-template/workflows/Node%20CI/badge.svg)](https://github.com/shgysk8zer0/jekyll-template/actions)
 [![Super Linter](https://github.com/shgysk8zer0/jekyll-template/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/shgysk8zer0/jekyll-template/actions?query=workflow%3A%22Lint+Code+Base%22)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/252539d1-4596-41e9-9d63-97a964822b25/deploy-status)](https://app.netlify.com/sites/infallible-galileo-ac41ee/deploys)
 
