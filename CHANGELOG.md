@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 <!-- markdownlint-disable -->
+## [v1.0.6] - 2020-06-27
+
+### Fixed
+- Fix invalid script src for `<button is="pwa-install">` [#63](https://github.com/shgysk8zer0/jekyll-template/issues/63)
+- Update Node CI status badge in README [#62](https://github.com/shgysk8zer0/jekyll-template/issues/62)
+
+### Removed
+- Dependabot status badge, since not supported by v2
+
 ## [v1.0.5] 2020-06-26
 
 ### Changed
