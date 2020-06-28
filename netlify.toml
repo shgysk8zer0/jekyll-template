@@ -21,10 +21,10 @@
     Content-Security-Policy = '''
       default-src 'self';
       base-uri 'self';
-      img-src 'self' https://i.imgur.com https://cdn.kernvalley.us https://secure.gravatar.com https://maps.wikimedia.org/osm-intl/ https://via.placeholder.com https://*.githubusercontent.com/;
+      img-src 'self' https://i.imgur.com https://*.githubusercontent.com/u/ https://cdn.kernvalley.us https://secure.gravatar.com https://maps.wikimedia.org/osm-intl/ https://via.placeholder.com https://*.githubusercontent.com/;
       script-src 'self' moz-extension: https://cdn.kernvalley.us https://unpkg.com/ https://www.google-analytics.com/ https://www.googletagmanager.com https://polyfill.io/ https://cdn.polyfill.io/ https://www.youtube.com/ https://www.youtube-nocookie.com/;
       style-src 'self' 'unsafe-inline' https://cdn.kernvalley.us https://unpkg.com/ https://fonts.googleapis.com/ https://www.youtube.com/ https://www.youtube-nocookie.com/;
-      connect-src 'self' https://cdn.kernvalley.us https://api.kernvalley.us https://api.github.com/ https://unpkg.com/ https://polyfill.io/ https://cdn.polyfill.io/ https://www.google-analytics.com/ https://www.googletagmanager.com/ https://i.imgur.com https://secure.gravatar.com https://maps.wikimedia.org/osm-intl/ https://fonts.gstatic.com/  https://fonts.googleapis.com/ https://via.placeholder.com;
+      connect-src 'self' https://baconipsum.com/api/ https://*.githubusercontent.com/u/ https://cdn.kernvalley.us https://api.kernvalley.us https://api.github.com/ https://unpkg.com/ https://polyfill.io/ https://cdn.polyfill.io/ https://www.google-analytics.com/ https://www.googletagmanager.com/ https://i.imgur.com https://secure.gravatar.com https://maps.wikimedia.org/osm-intl/ https://fonts.gstatic.com/  https://fonts.googleapis.com/ https://via.placeholder.com;
       font-src 'self' https://cdn.kernvalley.us https://fonts.gstatic.com/;
       media-src 'none';
       frame-src https://www.youtube.com https://www.youtube-nocookie.com https://disqus.com;

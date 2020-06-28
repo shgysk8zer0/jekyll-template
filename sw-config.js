@@ -24,7 +24,7 @@ const config = {
 
 		/* JS, `customElements`, etc. */
 		'https://polyfill.io/v3/polyfill.min.js',
-		'https://cdn.kernvalley.us/components/pwa-install.js',
+		'https://cdn.kernvalley.us/components/pwa/install.js',
 
 		/* CSS */
 		'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css',
@@ -39,7 +39,6 @@ const config = {
 		'https://cdn.kernvalley.us/img/adwaita-icons/actions/mail-send.svg',
 		'https://cdn.kernvalley.us/img/adwaita-icons/actions/mark-location.svg',
 		'https://cdn.kernvalley.us/img/octicons/file-media.svg',
-		'https://avatars2.githubusercontent.com/u/1627459?v=4&s=64',
 
 		/* Social Icons for Web Share API shim */
 		'https://cdn.kernvalley.us/img/octicons/mail.svg',
