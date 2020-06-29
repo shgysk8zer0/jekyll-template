@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 <!-- markdownlint-disable -->
+## [v1.0.7] - 2020-06-08
+
+### Fixed
+- Set `og:image` correctly [#66](https://github.com/shgysk8zer0/jekyll-template/issue/66)
+
 ## [v1.0.6] - 2020-06-27
 
 ### Fixed

@@ -12,7 +12,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	{% if page.thumbnail.url $}
 		<meta itemprop="thumbnailUrl" content="{{ page.thumbnail.url }}" />
-		<meta itemprop="og:image" content="{{ page.thumbnail.url }}" />
+		<meta property="og:image" content="{{ page.thumbnail.url }}" />
 		<meta name="twitter:image" content="{{ page.thumbnail.url }}" />
 	{% elsif page.imgur %}
 		{% capture hash %}{{ page.imgur | replace: 'https://i.imgur.com/', '' | replace: 'https://imgur.com/', '' | replace: '.png', '' | replace: '.jpg', '' }}{% endcapture %}
@@ -21,12 +21,12 @@
 		<meta name="twitter:image" content="{{ hash | prepend: 'https://i.imgur.com/' | append: 'l.png' }}" />
 	{% elsif page.image %}
 		<meta itemprop="thumbnailUrl" content="{{ page.image }}" />
-		<meta itemprop="og:image" content="{{ page.image }}" />
+		<meta property="og:image" content="{{ page.image }}" />
 		<meta name="twitter:image" content="{{ page.image }}" />
 	{% elsif site.data.app.screenshots %}
 		{% for screenshot in site.data.app.screenshots %}
 			<meta itemprop="thumbnailUrl" content="{{ screenshot.src }}" />
-			<meta itemprop="og:image" content="{{ screenshot.src }}" />
+			<meta property="og:image" content="{{ screenshot.src }}" />
 			<meta name="twitter:image" content="{{ screenshot.src }}" />
 		{% endfor %}
 	{% endif %}
