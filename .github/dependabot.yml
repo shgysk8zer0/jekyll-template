@@ -32,3 +32,11 @@ updates:
   open-pull-requests-limit: 10
   reviewers:
   - shgysk8zer0
+# - package-ecosystem: gitsubmodule
+#   directory: "/"
+#   schedule:
+#     interval: weekly
+#     time: "13:00"
+#   open-pull-requests-limit: 10
+#   reviewers:
+#   - shgysk8zer0
