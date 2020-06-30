@@ -48,7 +48,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: github/super-linter@v2.2.2
+        uses: docker://github/super-linter:v3
         env:
           # @TODO Add HTML when/if available
           VALIDATE_ALL_CODEBASE: true

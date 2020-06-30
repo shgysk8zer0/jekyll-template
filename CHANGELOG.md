@@ -6,7 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 <!-- markdownlint-disable -->
-## [v1.0.7] - 2020-06-08
+## [v1.0.8] - 2020-06-29
+
+### Changed
+- Update Super linter to Docker image @ version 3
+- Update `eslint` rules
+
+## [v1.0.7] - 2020-06-28
 
 ### Fixed
 - Set `og:image` correctly [#66](https://github.com/shgysk8zer0/jekyll-template/issue/66)
