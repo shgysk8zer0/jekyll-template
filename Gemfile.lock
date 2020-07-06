@@ -32,7 +32,7 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 1.8)
-    jekyll-admin (0.10.1)
+    jekyll-admin (0.10.2)
       jekyll (>= 3.7, < 5.0)
       sinatra (~> 1.4)
       sinatra-contrib (~> 1.4)
@@ -47,7 +47,7 @@ GEM
       listen (~> 3.0)
     jekyll-youtube (1.0.0)
       jekyll
-    kramdown (2.2.1)
+    kramdown (2.3.0)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
@@ -100,7 +100,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (= 4.1.1)
-  jekyll-admin (~> 0.10.1)
+  jekyll-admin (~> 0.10.2)
   jekyll-avatar (~> 0.7.0)
   jekyll-gist (~> 1.4, >= 1.4.1)
   jekyll-paginate (~> 1.1)
