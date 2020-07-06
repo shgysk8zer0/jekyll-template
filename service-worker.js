@@ -1,7 +1,12 @@
+---
+layout: null
+---
 'use strict';
-/*eslint no-undef: 0*/
-/* 2020-07-03T17:35*/
-self.importScripts('/sw-config.js');
+/* global config */
+/* eslint-env serviceworker */
+/* {{ site.data.app.version | default: site.version }} */
+
+self.importScripts('{{ site.service-worker-config | default: "/sw-config.js" }}');
 
 self.addEventListener('install', async event => {
 	event.waitUntil((async () => {
@@ -58,29 +63,35 @@ self.addEventListener('fetch', event => {
 			} else if (Array.isArray(config.allowed) && config.allowed.some(entry => (
 				entry instanceof RegExp
 					? entry.test(event.request.url)
-					: event.request.url === entry
+					: event.request.url.startsWith(entry)
 			))) {
 				const resp = await caches.match(event.request);
 
 				if (resp instanceof Response) {
 					return resp;
-				} else if (navigator.onLine) {
+				} else {
 					const resp = await fetch(event.request);
 
 					if (resp instanceof Response) {
-						const cache = await caches.open(config.version);
-						cache.put(event.request, resp.clone());
+						const cpy = resp.clone();
+						caches.open(config.version).then(cache => cache.put(event.request, cpy));
 						return resp;
 					} else {
 						console.error(`Failed in request for ${event.request.url}`);
 					}
-				} else {
-					console.error('Offline');
 				}
 			} else {
 				return fetch(event.request);
 			}
 		})());
+	}
+});
+
+self.addEventListener('push', event => {
+	const data = event.data.json();
+	if (('notification' in data) && Array.isArray(data.notification) && Notification.permission === 'granted') {
+
+		this.registration.showNotification(...data.notification);
 	}
 });
 

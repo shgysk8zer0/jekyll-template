@@ -4,11 +4,15 @@
         "es6": true
     },
     "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
         "sourceType": "module",
-        "ecmaVersion": 2019
+        "ecmaVersion": 2018
     },
-    "plugins": ["async-await"],
+    "plugins": [
+      "async-await",
+      "frontmatter"
+    ],
     "rules": {
         "indent": [
             2,
@@ -23,13 +27,14 @@
             "always"
         ],
         "no-console": 0,
-        "no-async-promise-executor": 0,
-        "no-prototype-builtins": 0,
         "async-await/space-after-async": 2,
-        "async-await/space-after-await": 2
+        "async-await/space-after-await": 2,
+        "generator-star-spacing": ["error", {
+            "before": false,
+            "after": true,
+            "anonymous": "neither",
+            "method": {"before": true, "after": false}
+        }]
     },
-    "globals": {
-        "URLSearchParams": false,
-        "ga": false
-    }
+    "globals": {}
 }

@@ -21,21 +21,21 @@ const config = {
 		'https://cdn.kernvalley.us/components/slide-show/slide-show.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
 		'https://cdn.kernvalley.us/components/spotify/player.html',
+		'https://cdn.kernvalley.us/components/pwa/prompt.html',
 
 		/* JS, `customElements`, etc. */
 		'https://polyfill.io/v3/polyfill.min.js',
-		'https://cdn.kernvalley.us/components/pwa/install.js',
 
 		/* CSS */
 		'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css',
 
 		/* Images & Icons */
-		'/img/apple-touch-icon.png',
-		'/img/icon-512.png',
-		'/img/icon-192.png',
-		'/img/icon-32.png',
-		'/img/favicon.svg',
-		'/img/neon.svg',
+		// '/img/apple-touch-icon.png',
+		// '/img/icon-512.png',
+		// '/img/icon-192.png',
+		// '/img/icon-32.png',
+		// '/img/favicon.svg',
+		// '/img/neon.svg',
 		'https://cdn.kernvalley.us/img/adwaita-icons/actions/mail-send.svg',
 		'https://cdn.kernvalley.us/img/adwaita-icons/actions/mark-location.svg',
 		'https://cdn.kernvalley.us/img/octicons/file-media.svg',
@@ -57,9 +57,12 @@ const config = {
 		/* Other */
 	].map(path => new URL(path, location.origin).href),
 	allowed: [
-		/https:\/\/secure\.gravatar\.com\/avatar\/*/,
+		/https:\/\/maps\.wikimedia\.org\/osm-intl\/*/,
 		/https:\/\/i\.imgur\.com\/*/,
-		/https:\/\/avatars2\.githubusercontent\.com\/u\/*/,
+		/https:\/\/secure\.gravatar\.com\/avatar\/*/,
+		/https:\/\/via\.placeholder\.com\/*/,
+		/https:\/\/*\.githubusercontent\.com\/u\/*/,
 		/https:\/\/api\.github\.com\/users\/*/,
+		`${location.origin}/img/`,
 	],
 };

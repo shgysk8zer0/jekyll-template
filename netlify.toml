@@ -3,8 +3,6 @@
   base = "./"
   publish = "./_site/"
   command = "npm run build && npm run build:site"
-  [build.environment]
-    GIT_LFS_ENABLED = "1"
 [[headers]]
   for="/*"
   [headers.values]
