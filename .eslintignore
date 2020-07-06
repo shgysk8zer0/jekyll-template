@@ -5,6 +5,5 @@
 /fonts/
 /js/std-js/
 /js/svg4everybody/
-/service-worker.js
 *.min.js
 *.config.js
