@@ -10,7 +10,7 @@ import 'https://cdn.kernvalley.us/components/bacon-ipsum.js';
 import 'https://cdn.kernvalley.us/components/leaflet/map.js';
 import 'https://cdn.kernvalley.us/components/leaflet/marker.js';
 import 'https://cdn.kernvalley.us/components/pwa/install.js';
-import {$, ready} from 'https://cdn.kernvalley.us/js/std-js/functions.js';
+import { $, ready } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 
 document.documentElement.classList.replace('no-js', 'js');
 document.documentElement.classList.toggle('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
