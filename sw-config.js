@@ -2,7 +2,9 @@
 layout: null
 ---
 'use strict';
-/*eslint no-unused-vars: 0*/
+/* eslint-env serviceworker */
+/* eslint no-unused-vars: 0 */
+
 const config = {
 	version: '{{ site.data.app.version | default: site.version }}',
 	fresh: [

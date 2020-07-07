@@ -3,8 +3,5 @@
 /fonts/
 /_site/
 /node_modules/
-/css/core-css/
-/css/normalize.css/
-/css/animate.css/
 *.min*
 *.map

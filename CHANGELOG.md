@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 <!-- markdownlint-disable -->
+## [v1.0.10] - 2020-07-07
+
+### Changed
+- Dependency updates
+- Add frontmatter plugin for eslint
+- Update service worker to use `event.request` instead of `event.request.url`
+- Update linting config
+- Use correct environment & globals in eslint
+
 ## [v1.0.9] - 2020-07-02
 
 ### Added
