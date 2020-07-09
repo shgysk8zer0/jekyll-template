@@ -12,8 +12,8 @@ jobs:
 
       - name: Install and Build 🔧
         uses: actions/setup-node@v2.1.0
-          with:
-            node-version: '12.x'
+        with:
+          node-version: '12.x'
         run: |
           npm install
           npm run build
