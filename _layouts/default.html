@@ -3,33 +3,15 @@ name: default
 theme: default
 og-type: website
 itemtype: 'https://schema.org/WebPage'
-sidebar: true
-recent-posts: 5
-pinned-posts: 5
+layout: base
+sidebar: false
+pinned-posts: 3
+recent-posts: 8
+main-itemtype: Event
 ---
-<!DOCTYPE html>
-<html
-	lang="{{ site.lang }}"
-	dir="{{ site.dir }}"
-	class="no-js border-box scroll-smooth"
-	data-theme="{{ page.theme | default: layout.theme }}"
-	data-layout="{{ layout.name }}"
-	{% if site.google-analytics %}data-google-analytics="{{ site.google-analytics }}"{% endif %}
-	{% if page.ads %}data-ad-sense-id="{{ site.ad-sense }}"{% endif %}
-	{% if page.pageLevelAds %}data-page-level-ads="{{ page.pageLevelAds }}"{% endif %}
-	itemtype="{{ layout.itemtype }}"
-	prefix="og: http://ogp.me/ns#"
-	itemscope=""
->
-	{% include head.html %}
-	<body id="top" class="grid font-main background-primary color-default overflow-x-hidden">
-		{% include header.html %}
-		{% include nav.html %}
-		<main id="main" class="card shadow">
-			{{ content }}
-		</main>
-		{% if layout.sidebar %}{% include sidebar.html recent-posts=5 pinned-posts=5 %}{% endif %}
-		{% include footer.html %}
-		{% include share-button.html %}
-	</body>
-</html>
+{% unless page.no-header == true %}{% include header.html %}{% endunless %}
+{% unless page.no-nav == true %}{% include nav.html %}{% endunless %}
+<main id="main">{{ content }}</main>
+{% unless page.no-sidebar %}{% include sidebar.html recent-posts=layout.recent-posts pinned-posts=layout.pinned-posts %}{% endunless %}
+{% unless page.no-footer == true %}{% include footer.html %}{% endunless %}
+{% unless page.no-share == true %}{% include share-button.html text=page.description %}{% endunless %}

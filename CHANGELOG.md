@@ -1,3 +1,10 @@
+---
+title: CHANGELOG
+permalink: /changelog/
+description: List of recent versions and modifications for Jekyll Template repo
+layout: page
+---
+<!-- markdownlint-disable -->
 # Changelog
 All notable changes to this project will be documented in this file.
 
@@ -5,7 +12,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-<!-- markdownlint-disable -->
+## [v1.0.11] - 2020-07-09
+
+### Added
+- GitHub Pages workflow
+- 404 page [#65](https://github.com/shgysk8zer0/jekyll-template/issues/65)
+- "base" layout which all others (currently) extend
+- Generic "page" layout
+
+### Changed
+- Update Node version in workflows
+
 ## [v1.0.10] - 2020-07-07
 
 ### Changed
@@ -41,13 +58,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Dependabot status badge, since not supported by v2
 
-## [v1.0.5] 2020-06-26
+## [v1.0.5] - 2020-06-26
 
 ### Changed
 - Merge more Dependabot pull requests
 - Update Ruby version to 2.7.1
 
-## [v1.0.4] 2020-06-26
+## [v1.0.4] - 2020-06-26
 
 ### Added
 - Dependabot badge
@@ -66,17 +83,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Disable Git submodules for dependabot (template has no submodules)
 
-## [1.0.3] 2020-06-25
+## [1.0.3] - 2020-06-25
 
 ### Added
 - Dependabot config
 
-## [v1.0.2] 2020-06-19
+## [v1.0.2] - 2020-06-19
 
 ### Changed
 - Disabled markdown linting of releases section in `CHANGELOG.md`
 
-## [v1.0.1] 2020-06-19
+## [v1.0.1] - 2020-06-19
 ### Added
 - Include Changelog
 - Implement GitHub's Super Linter
@@ -92,6 +109,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Accessibility of `<button is="share-button">`
 - Set correct thumbnails in page's `<head>`
 
-## [v1.0.0] 2020-05-12
+## [v1.0.0] - 2020-05-12
 Initial Version Release
 <!-- markdownlint-restore -->
