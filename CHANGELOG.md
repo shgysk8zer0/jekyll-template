@@ -15,10 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v1.0.11] - 2020-07-09
 
 ### Added
-- GitHub Pages workflow
 - 404 page [#65](https://github.com/shgysk8zer0/jekyll-template/issues/65)
 - "base" layout which all others (currently) extend
 - Generic "page" layout
+- ~~GitHub Pages workflow~~
 
 ### Changed
 - Update Node version in workflows
