@@ -31,6 +31,11 @@
 			</a>
 		</div>
 	</div>
+	{% if site.service_worker %}
+		<button is="pwa-install" class="btn btn-primary" src="{{ site.service_worker }}" scope="/" title="Install Web App" reloadonupdate="" hidden="">
+			<span>Install</span>
+		</button>
+	{% endif %}
 	<hr />
 	<div class="copyright">
 		<github-user user="{{ site.repository.username }}">

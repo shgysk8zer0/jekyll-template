@@ -5,8 +5,5 @@
 			<br />
 			<span class="nav-link-label">{{ link.label }}</span>
 		</a>
-		{% if site.service_worker %}
-			<button is="pwa-install" class="btn btn-primary" src="{{ site.service_worker }}" scope="/" title="Install Web App" reloadonupdate=""></button>
-		{% endif %}
 	{% endfor %}
 </nav>
