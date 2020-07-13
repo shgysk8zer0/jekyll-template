@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update CSP to to allow every request in `connect-src`
--Move `<button is="pwa-install">` to footer
+- Move `<button is="pwa-install">` to footer
 
 ## [v1.0.11] - 2020-07-09
 
