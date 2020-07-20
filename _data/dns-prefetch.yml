@@ -4,3 +4,6 @@
 - href: https://i.imgur.com/
   crossorigin: anonymous
   referrerPolicy: origin
+- href: https://unpkg.com/
+  crossorigin: anonymous
+  referrerPolicy: no-referrer

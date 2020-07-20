@@ -13,6 +13,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.0.14] - 2020-07-19
+
+### Added
+- Minimal set of icons
+- `"apple-touch-icon"`
+- Test of PWA shortcuts (to Bacon Ipsum demo post)
+- Use dns-prefetch to `https://unpkg.com`
+- Description and tags/keywords for home page
+
+### Changed
+- Update CSP srcs
+- Add missing SVG icon sprites
+- Mark icons as `"maskable"`
+- Add missing values to PWA manifest
+- Update screenshots
+- Use `features` in manifest to list advantages of projects built using this template repo
+- List these features in README
+
 ## [v1.0.13] - 2020-07-17
 
 ### Updated
