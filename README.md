@@ -25,3 +25,16 @@ A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts,
 - [Code of Conduct](./.github/CODE_OF_CONDUCT.md)
 - [Contributing](./.github/CONTRIBUTING.md)
 <!-- - [Security Policy](./.github/SECURITY.md) -->
+
+### Features
+- PWA-ready GitHub template for Jekyll sites
+- Dark mode support, controlled by `(prefers-color-scheme)` media query
+- Includes templates created with SEO via structured data in mind
+- Initial setup scores 99% on mobile on Page Speed Insights
+- Responsive design supporting any screen size thanks to CSS grid and use of viewport units
+- Integtation with system sharing via the Share API (with fallback)
+- Preset Pull Request and Issue templates, as well as Code of Conduct & Contributing Guidelines
+- Built-in testing via GitHub Actions, eslint, and stylelint
+- Always up-to-date thanks to preset Dependabot-v2 config
+- Setup for quick deployment to Netlify
+- Version files for Ruby and NodeJS (`.rvmrc`, `.ruby-version`, and `.nvmrc`)

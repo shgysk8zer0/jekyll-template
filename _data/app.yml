@@ -34,17 +34,17 @@ icons:
   type: image/png
   sizes: 16x16
 screenshots:
-- src: 'https://i.imgur.com/uRKaQQQh.png'
-  sizes: 1024x567
+- src: 'https://i.imgur.com/IjdVouxh.png'
+  sizes: 1024x502
   type: image/png
-- src: 'https://i.imgur.com/uRKaQQQl.png'
-  sizes: 640x354
+- src: 'https://i.imgur.com/IjdVouxl.png'
+  sizes: 640x314
   type: image/png
-- src: 'https://i.imgur.com/uRKaQQQm.png'
-  sizes: 320x127
+- src: 'https://i.imgur.com/IjdVouxm.png'
+  sizes: 320x157
   type: image/png
-- src: 'https://i.imgur.com/uRKaQQQt.png'
-  sizes: 160x89
+- src: 'https://i.imgur.com/IjdVouxt.png'
+  sizes: 160x78
   type: image/png
 # https://web.dev/app-shortcuts/
 shortcuts:
@@ -74,5 +74,20 @@ shortcuts:
     sizes: 36x36
     type: image/png
 related_applications: []
-features: []
-categories: []
+features:
+- PWA-ready GitHub template for Jekyll sites
+- Dark mode support, controlled by (prefers-color-scheme) media query
+- Includes templates created with SEO via structured data in mind
+- Initial setup scores 99% on mobile on Page Speed Insights
+- Responsive design supporting any screen size thanks to CSS grid and use of viewport units
+- Integtation with system sharing via the Share API (with fallback)
+- Preset Pull Request and Issue templates, as well as Code of Conduct & Contributing Guidelines
+- Built-in testing via GitHub Actions, eslint, and stylelint
+- Always up-to-date thanks to preset Dependabot-v2 config
+- Setup for quick deployment to Netlify
+- Version files for Ruby and NodeJS (.rvmrc, .ruby-version, and .nvmrc)
+# https://github.com/w3c/manifest/wiki/Categories
+categories:
+- business
+- productivity
+- utilities

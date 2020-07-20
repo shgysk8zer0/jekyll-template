@@ -25,6 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add missing SVG icon sprites
 - Mark icons as `"maskable"`
 - Add missing values to PWA manifest
+- Update screenshots
+- Use `features` in manifest to list advantages of projects built using this template repo
+- List these features in README
 
 ## [v1.0.13] - 2020-07-17
 

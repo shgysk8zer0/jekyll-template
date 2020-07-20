@@ -66,5 +66,6 @@ const config = {
 		/https:\/\/secure\.gravatar\.com\/avatar\/*/,
 		/https:\/\/*\.githubusercontent\.com\/u\/*/,
 		/https:\/\/api\.github\.com\/users\/*/,
+		/https:\/\/baconipsum\.com\/api\/*/,
 	],
 };
