@@ -1,4 +1,4 @@
-# jekyll-template
+# [jekyll-template](https://infallible-galileo-ac41ee.netlify.app/)
 A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc.
 
 <!-- [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=shgysk8zer0/jekyll-template)](https://dependabot.com) -->
@@ -26,7 +26,7 @@ A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts,
 - [Contributing](./.github/CONTRIBUTING.md)
 <!-- - [Security Policy](./.github/SECURITY.md) -->
 
-### Features
+## Features
 - PWA-ready GitHub template for Jekyll sites
 - Dark mode support, controlled by `(prefers-color-scheme)` media query
 - Includes templates created with SEO via structured data in mind
