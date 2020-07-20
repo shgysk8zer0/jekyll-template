@@ -87,7 +87,6 @@
 		<link rel="{{ icon.rel | default: 'icon' }}" href="{{ icon.src }}" type="{{ icon.type }}" sizes="{{ icon.sizes }}">
 	{% endfor %}
 	<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="{{ site.data.app.theme.color | default: '#528ff9' }}" />
-	<link rel="shortcut icon" href="/favicon.ico" />
 	{% if site.data.preload %}{% for link in site.data.preload %}
 		<link rel="preload" href="{{ link.href }}" as="{{ link.as | default: 'fetch' }}" type="{{ link.type }}" crossorigin="{{ link.crossorigin | default: 'anonymous' }}" referrerpolicy="{{ link.referrerPolicy | default: 'origin-when-crossorigin' }}" integrity="{{ link.integrity }}" importance="{{ link.importance | default: 'auto' }}" />
 	{% endfor %}{% endif %}
