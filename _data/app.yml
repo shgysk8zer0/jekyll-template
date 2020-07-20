@@ -1,7 +1,10 @@
 name: Jekyll Template
 shortName: Jekyll Template
-version: 1.0.1
+version: 1.0.14
+lang: en
+dir: ltr
 display: standalone
+orientation: any
 description: "A GitHub repository for easily creating fast, modern, PWA compatible websites"
 icons-file: /img/icons.svg
 theme:
@@ -11,6 +14,7 @@ icons:
 - src: /img/favicon.svg
   type: image/svg+xml
   sizes: 150x150
+  purpose: maskable any
 - src: /img/apple-touch-icon.png
   rel: apple-touch-icon
   type: image/png
@@ -18,9 +22,11 @@ icons:
 - src: /img/icon-512.png
   type: image/png
   sizes: 512x512
+  purpose: maskable any
 - src: /img/icon-192.png
   type: image/png
   sizes: 192x192
+  purpose: maskable any
 - src: /img/icon-32.png
   type: image/png
   sizes: 32x32
@@ -28,8 +34,17 @@ icons:
   type: image/png
   sizes: 16x16
 screenshots:
+- src: 'https://i.imgur.com/uRKaQQQh.png'
+  sizes: 1024x567
+  type: image/png
 - src: 'https://i.imgur.com/uRKaQQQl.png'
   sizes: 640x354
+  type: image/png
+- src: 'https://i.imgur.com/uRKaQQQm.png'
+  sizes: 320x127
+  type: image/png
+- src: 'https://i.imgur.com/uRKaQQQt.png'
+  sizes: 160x89
   type: image/png
 # https://web.dev/app-shortcuts/
 shortcuts: []

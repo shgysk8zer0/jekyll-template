@@ -14,7 +14,7 @@ robots: 'follow, index'
 referrer: origin-when-cross-origin
 manifest: /manifest.json
 tiles-config: /browserconfig.xml
-# service_worker: "./service-worker.js"
+service_worker: "./service-worker.js"
 og-type: website
 description: "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc."
 mobile-web-app-capable: true

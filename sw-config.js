@@ -17,36 +17,38 @@ const config = {
 		'/css/index.min.css',
 		'/js/index.min.js',
 		'/img/icons.svg',
+
+		/* JS */
+		'https://cdn.polyfill.io/v3/polyfill.min.js',
+
+		/* `customElements`templates */
 		'https://cdn.kernvalley.us/components/toast-message.html',
 		'https://cdn.kernvalley.us/components/leaflet/map.html',
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.html',
 		'https://cdn.kernvalley.us/components/slide-show/slide-show.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
-		'https://cdn.kernvalley.us/components/spotify/player.html',
 		'https://cdn.kernvalley.us/components/pwa/prompt.html',
 
-		/* JS, `customElements`, etc. */
-		'https://polyfill.io/v3/polyfill.min.js',
-
 		/* CSS */
+		'https://cdn.kernvalley.us/components/toast-message.css',
+		'https://cdn.kernvalley.us/components/leaflet/map.css',
+		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.css',
+		'https://cdn.kernvalley.us/components/slide-show/slide-show.css',
+		'https://cdn.kernvalley.us/components/github/user.css',
+		'https://cdn.kernvalley.us/components/pwa/prompt.css',
 		'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css',
 
 		/* Images & Icons */
-		// '/img/apple-touch-icon.png',
-		// '/img/icon-512.png',
-		// '/img/icon-192.png',
-		// '/img/icon-32.png',
-		// '/img/favicon.svg',
-		// '/img/neon.svg',
-		'https://cdn.kernvalley.us/img/adwaita-icons/actions/mail-send.svg',
-		'https://cdn.kernvalley.us/img/adwaita-icons/actions/mark-location.svg',
-		'https://cdn.kernvalley.us/img/octicons/file-media.svg',
+		'/img/apple-touch-icon.png',
+		'/img/icon-512.png',
+		'/img/icon-192.png',
+		'/img/icon-32.png',
+		'/img/favicon.svg',
 
 		/* Social Icons for Web Share API shim */
 		'https://cdn.kernvalley.us/img/octicons/mail.svg',
 		'https://cdn.kernvalley.us/img/logos/facebook.svg',
 		'https://cdn.kernvalley.us/img/logos/twitter.svg',
-		'https://cdn.kernvalley.us/img/logos/google-plus.svg',
 		'https://cdn.kernvalley.us/img/logos/linkedin.svg',
 		'https://cdn.kernvalley.us/img/logos/reddit.svg',
 		'https://cdn.kernvalley.us/img/logos/gmail.svg',
@@ -62,9 +64,7 @@ const config = {
 		/https:\/\/maps\.wikimedia\.org\/osm-intl\/*/,
 		/https:\/\/i\.imgur\.com\/*/,
 		/https:\/\/secure\.gravatar\.com\/avatar\/*/,
-		/https:\/\/via\.placeholder\.com\/*/,
 		/https:\/\/*\.githubusercontent\.com\/u\/*/,
 		/https:\/\/api\.github\.com\/users\/*/,
-		`${location.origin}/img/`,
 	],
 };
