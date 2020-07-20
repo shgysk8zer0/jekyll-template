@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Minimal set of icons
 - `"apple-touch-icon"`
 - Test of PWA shortcuts (to Bacon Ipsum demo post)
+- Use dns-prefetch to `https://unpkg.com`
+- Description and tags/keywords for home page
 
 ### Changed
 - Update CSP srcs
