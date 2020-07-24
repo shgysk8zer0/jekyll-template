@@ -6,11 +6,11 @@
   media: screen
   crossorigin: anonymous
   referrerpolicy: no-referrer
-  integrity: sha384-CnnJ/tg/oOKfQDCf2C1k5Yctoz0upEh+qJsutNrTb3uh10XbjPyUUvbeeFLVdsek
+  # integrity: sha384-CnnJ/tg/oOKfQDCf2C1k5Yctoz0upEh+qJsutNrTb3uh10XbjPyUUvbeeFLVdsek
 - href: "https://cdn.kernvalley.us/css/core-css/theme/default/force-dark.css"
   rel: "alternate stylesheet"
   title: Dark Mode
   media: screen
   crossorigin: anonymous
   referrerpolicy: no-referrer
-  integrity: sha384-qTspKXv6nzPpp0lGyFZ9HUt8H3JmRFVUzvuyrGXXQWsWMg1e4nTBrUxrQShesAfK
+  # integrity: sha384-qTspKXv6nzPpp0lGyFZ9HUt8H3JmRFVUzvuyrGXXQWsWMg1e4nTBrUxrQShesAfK

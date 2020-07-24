@@ -1,6 +1,6 @@
 ---
 title: Contact
-parmalink: /contact/
+permalink: /contact/
 description: Contact form
 layout: page
 no-sidebar: true
@@ -10,6 +10,7 @@ scripts:
 - src: "https://cdn.kernvalley.us/components/share-target.js"
   crossorigin: anonymous
   referrerpolicy: no-referrer
+  async: true # No harm in making it async since GET does not require service worker / `postMessage()`
 ---
 <div class="center">
 	<form name="contact" is="share-target" id="contact-form" class="card shadow">
