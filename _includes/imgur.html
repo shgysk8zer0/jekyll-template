@@ -17,6 +17,7 @@
 		crossorigin="{{ include.crossorigin | default: 'anonymous' }}"
 		referrerpolicy="{{ include.referrerpolicy | default: 'origin-when-cross-origin' }}"
 		decoding="{{ include.decoding | default: 'auto' }}"
+		loading="{{ include.loading | default: 'lazy' }}"
 		{% if include.itemprop %}itemprop="{{ include.itemprop }}"{% endif %}
 		{% if include.id %} id="{{ include.id }}"{% endif %}
 		{% if include.width %}width="{{ include.width }}"{% endif %}

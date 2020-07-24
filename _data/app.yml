@@ -1,6 +1,6 @@
 name: Jekyll Template
 shortName: Jekyll Template
-version: 1.0.14-a1
+version: 1.0.14-a2
 lang: en
 dir: ltr
 display: standalone
@@ -8,7 +8,7 @@ orientation: any
 description: "A GitHub repository for easily creating fast, modern, PWA compatible websites"
 icons-file: /img/icons.svg
 theme:
-  color: '#528ff9'
+  color: '#007bff'
   background: '#242424'
 icons:
 - src: /img/favicon.svg

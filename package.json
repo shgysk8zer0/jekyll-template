@@ -1,6 +1,6 @@
 {
   "name": "jekyll-template",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "private": true,
   "description": "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc.",
   "config": {
@@ -45,8 +45,8 @@
     "git:submodules": "if [ -f '.gitmodules' ]; then git submodule update --init --recursive; fi",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint .",
-    "lint:css": "stylelint ${npm_package_config_dir_css}",
-    "fix:css": "stylelint ${npm_package_config_dir_css} --fix",
+    "lint:css": "stylelint './**.css'",
+    "fix:css": "stylelint './**.css' --fix",
     "fix:js": "eslint. --fix",
     "build": "npm run build:icons && npm run build:css && npm run build:js",
     "build:site": "JEKYLL_ENV=production bundle exec jekyll build",

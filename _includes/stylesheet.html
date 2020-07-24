@@ -1,6 +1,7 @@
 <link
-	rel="stylesheet"
+	rel="{{ include.rel | default: 'stylesheet' }}"
 	href="{{ include.href }}"
 	media="{{ include.media | default: 'all' }}"
+	{% if include.title %}title="{{ include.title }}"{% endif %}
 	{% if include.crossorigin %}crossorigin="{{ include.crossorigin }}"{% endif %}
 	{% if stylesheet.integrity %}integrity="{{ include.integrity }}"{% endif %} />

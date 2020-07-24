@@ -1,0 +1,70 @@
+<div id="contact-section" class="clearfix font-article background-primary color-default" itemtype="http://schema.org/Person" itemprop="about" itemscope="">
+	<a href="/" title="Home" class="fixed top left color-alt filter-shadow-dark bigger">
+		{% include icon.html icon='home' %}
+	</a>
+	<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="float-left">
+		{% include gravatar.html
+			gravatar=include.person.image.gravatar
+			sizes='(min-aspect-ratio: 3/2) 100vh, 100vw'
+			itemprop='url'
+			decoding='async'
+		%}
+	</figure>
+	<section class="contact-info-card inline-block">
+		<h1 class="center font-title">
+			<span itemprop="givenName">{{ include.person.givenName }}</span>
+			{% if include.person.additionalName %}<span itemprop="additionalName">{{ include.person.additionalName }}</span>{% endif %}
+			<span itemprop="familyName">{{ include.person.familyName }}</span>
+		</h1>
+		{% if include.person.worksFor %}
+			<dialog id="org-info-dialog" class="background-primary">
+				<header class="sticky top clearfix">
+					<button data-close="#org-info-dialog" class="font-main filter-shadow background-none color-default float-right">
+						{% include icon.html icon='close' %}
+					</button>
+				</header>
+				{% include business-info.html organization=include.person.worksFor itemprop='worksFor' %}
+			</dialog>
+			<h3>
+				{% include icon.html icon='organization' %}
+				<span itemprop="jobTitle">{{ include.person.jobTitle }}</span>
+				<span>@</span>
+				<span data-show-modal="#org-info-dialog" class="color-inherit underline">{{ include.person.worksFor.name }}</span>
+			</h3>
+			<hr />
+		{% elsif include.person.jobTitle %}
+			<h3>
+				{% include icon.html icon='organization' %}
+				<span itemprop="jobTitle">{{ include.person.jobTitle }}</span>
+			</h3>
+		{% endif %}
+		{% if include.person.homeLocation %}
+			{% include address.html address=include.person.homeLocation.address itemprop='homeLocation' %}
+		{% endif %}
+		{% if include.person.description %}
+			<hr />
+			<div class="clearfix">
+				{% include icon.html icon='note' class='icon current-color float-left' %}
+				<blockquote class="float-left" itemprop="description">{{ include.person.description }}</blockquote>
+			</div>
+			<hr />
+		{% endif %}
+		{% if include.person.telephone %}
+			{% include telephone.html telephone=include.person.telephone %}
+		<hr />
+		{% endif %}
+		{% if include.person.email %}
+			{% include email.html email=include.person.email %}
+			<hr />
+		{% endif %}
+		{% if include.person.url %}
+			{% include url.html url=include.person.url %}
+			<hr />
+		{% endif %}
+		{% if include.person.sameAs %}
+			<footer class="flex row big social-icons">
+				{% include social-links.html links=include.person.sameAs %}
+			</footer>
+		{% endif %}
+	</section>
+</div>

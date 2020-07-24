@@ -20,6 +20,7 @@ const config = {
 
 		/* JS */
 		'https://cdn.polyfill.io/v3/polyfill.min.js',
+		'https://cdn.kernvalley.us/components/share-target.js',
 
 		/* `customElements`templates */
 		'https://cdn.kernvalley.us/components/toast-message.html',

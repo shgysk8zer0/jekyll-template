@@ -1,2 +1,11 @@
 #sidebar {
+	grid-area: sidebar;
+}
+
+#sidebar .sidebar-section {
+	margin-bottom: 0.6em;
+}
+
+details.accordion[open] > :not(summary) {
+	animation: slideInDown 200ms ease-in;
 }
