@@ -13,6 +13,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+# [v1.0.15] - 202500-07-23
+
+### Added
+- Contact page (as demo)
+- `share_target`, sharing data from other apps to contact page
+
+### Updated
+- Import changes to various `_includes/*`
+- Fix sidebar-in-sidebar duplication
+- Misc style changes
+
+### Removed
+- Unused / outdated styles
+
 ## [v1.0.14] - 2020-07-19
 
 ### Added

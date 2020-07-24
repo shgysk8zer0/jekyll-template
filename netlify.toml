@@ -34,6 +34,3 @@
       block-all-mixed-content;
       upgrade-insecure-requests;
       disown-opener;'''
-# [[redirects]]
-  # from = ""
-  # to = ""

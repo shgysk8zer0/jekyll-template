@@ -1,0 +1,39 @@
+<div class="org-info" {% if include.itemprop %} itemprop="{{ include.itemprop }}"{% endif %} itemtype="http://schema.org/{{ include.itemtype | default: 'Organization' }}" itemscope="">
+	<div class="card shadow">
+		<h2 class="center" itemprop="name">{{ include.organization.name }}</h2>
+		{% if include.organization.logo %}
+			<img
+				itemprop="logo"
+				alt="Logo"
+				crossorigin="anonymous"
+				src="{{ include.organization.logo.contentUrl  }}"
+				width="{{ include.organization.logo.width | default: 64 }}"
+				height="{{ include.organization.logo.height | default: 64 }}" />
+				<hr />
+		{% endif %}
+		{% if include.organization.address %}
+			{% include address.html address=include.organization.address %}
+			<hr />
+		{% endif %}
+		{% if include.organization.description %}
+			<blockquote itemprop="description">{{ include.organization.description }}</blockquote>
+		{% endif %}
+		{% if include.organization.url %}
+			{% include url.html url=include.organization.url %}
+			<hr />
+		{% endif %}
+		{% if include.organization.email %}
+			{% include email.html email=include.organization.email %}
+			<hr />
+		{% endif %}
+		{% if include.organization.telephone %}
+			{% include telephone.html telephone=include.organization.telephone %}
+			<hr />
+		{% endif %}
+	</div>
+	{% if include.organization.sameAs %}
+		<footer class="flex row big social-icons card shadow">
+			{% include social-links.html links=include.organization.sameAs %}
+		</footer>
+	{% endif %}
+</div>
