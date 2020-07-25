@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Set `start_url` as `absolute_url` in production
+- Update various default colors
+
 # [v1.0.15] - 202500-07-23
 
 ### Added
