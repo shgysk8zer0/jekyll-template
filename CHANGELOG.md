@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `Notification` instead of `alert` on contact from submission
+
 ### Changed
 - Set `start_url` as `absolute_url` in production
 - Update various default colors
