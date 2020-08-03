@@ -125,13 +125,13 @@
 			<link rel="prerender" href="{{ link.href }}" />
 	{% endfor %}{% endif %}
 	{% if site.data.stylesheets %}{% for stylesheet in site.data.stylesheets[jekyll.environment] %}
-		{% include stylesheet.html rel=stylesheet.rel  href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
+		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin referrerpolicy=stylesheet.referrerpolicy integrity=stylesheet.integrity %}
 	{% endfor %}{% endif %}
 	{% if layout.stylesheets %}{% for stylesheet in layout.stylesheets %}
-		{% include stylesheet.html rel=stylesheet.rel  href=stylesheet.href tilte=stylesheet.title crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
+		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin referrerpolicy=stylesheet.referrerpolicy integrity=stylesheet.integrity %}
 	{% endfor %}{% endif %}
 	{% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
-		{% include stylesheet.html rel=stylesheet.rel  href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin integrity=crossorigin.integrity %}
+		{% include stylesheet.html rel=stylesheet.rel href=stylesheet.href title=stylesheet.title crossorigin=stylesheet.crossorigin referrerpolicy=stylesheet.referrerpolicy integrity=stylesheet.integrity %}
 	{% endfor %}{% endif %}
 	{% if site.feed %}<link rel="alternate" href="{{ site.feed.url }}" type="{{ site.feed.type | default: 'application/rss+xml' }}" title="{{ site.feed.title | default: 'Feed' }}" />{% endif %}
 	{% if page.feed %}<link rel="alternate" href="{{ page.feed.url }}" type="{{ page.feed.type | default: 'application/rss+xml' }}" title="{{ page.feed.title | default: 'Page Feed' }}" />{% endif %}
