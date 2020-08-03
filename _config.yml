@@ -9,7 +9,7 @@ dir: ltr
 charset: utf-8
 paginate: 8
 paginate_path: "/page-:num/"
-viewport: width=device-width
+viewport: "width=device-width, viewport-fit=cover"
 robots: 'follow, index'
 referrer: origin-when-cross-origin
 manifest: /manifest.json
