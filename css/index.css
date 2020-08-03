@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url("https://cdn.kernvalley.us/css/core-css/theme/default/index.css");
 @import url("https://cdn.kernvalley.us/css/normalize/normalize.css");
-@import url("https://cdn.kernvalley.us/css/core-css/rem.css");
 @import url("https://cdn.kernvalley.us/css/core-css/viewport.css");
 @import url("https://cdn.kernvalley.us/css/core-css/element.css");
 @import url("https://cdn.kernvalley.us/css/core-css/class-rules.css");
@@ -13,6 +12,16 @@
 @import url("https://cdn.kernvalley.us/css/core-css/forms.css");
 @import url("./vars.css");
 @import url("./layout.css");
+
+:root {
+	font-size: 18px;
+}
+
+@supports (width: clamp(1px, 2em, 1rem)) {
+	:root {
+		font-size: clamp(16px, 1.3vmax, 24px);
+	}
+}
 
 img.avatar {
 	vertical-align: middle;

@@ -1,7 +1,7 @@
 <footer id="footer">
 	<div class="social-links cols-2">
 		{% if site.repository %}
-			<div class="cols inline-block">
+			<div class="cols">
 				<a class="block" href="https://github.com/{{ site.repository.username }}/" target="_blank" rel="external noopener">
 					{% include icon.html icon="mark-github" class="current-color icon social-icon" %}
 					<span>GitHub Profile</span>
@@ -16,7 +16,7 @@
 				</a>
 			</div>
 		{% endif %}
-		<div class="cols inline-block">
+		<div class="cols">
 			<a class="block" href="https://shgysk8zer0.github.io" target="_blank" rel="external noopener" itemprop="sameAs">
 				{% include icon.html icon="web-browser" class="current-color icon social-icon" %}
 				<span>My Website</span>
