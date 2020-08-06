@@ -1,4 +1,4 @@
-<form name="{{ include.name | default: 'contact' }}" method="{{ include.method | default: 'GET' }}" action="{{ include.action | default: page.url }}" enctype="{{ include.enctype | default: 'application/x-www-form-urlencode' }}" is="share-target" id="{{ include.id | default: 'contact-form' }}" class="card shadow align-left" data-netlify="true" netlify-honeypot="{{ include.honeypot | default: 'check' }}">
+<form name="{{ include.name | default: 'contact' }}" method="{{ include.method | default: 'GET' }}" action="{{ include.action | default: page.url }}" enctype="{{ include.enctype | default: 'application/x-www-form-urlencoded' }}" is="share-target" id="{{ include.id | default: 'contact-form' }}" class="card shadow align-left" data-netlify="true" netlify-honeypot="{{ include.honeypot | default: 'check' }}">
 	<fieldset class="no-border align-left">
 		{% if include.legend %}<legend>{{ include.legend }}</legend>{% endif %}
 		<div class="form-group">
