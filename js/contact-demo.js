@@ -1,4 +1,5 @@
 import { HTMLNotificationElement } from 'https://cdn.kernvalley.us/components/notification/html-notification.js';
+import { alert } from 'https://cdn.kernvalley.us/js/std-js/asyncDialog.js';
 import { $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 
 export async function submitHandler(event) {
@@ -8,8 +9,8 @@ export async function submitHandler(event) {
 	$('fieldset, input, button', target).disable();
 
 	await new Promise(resolve => {
-		const notification = new HTMLNotificationElement(data.get('name'), {
-			body: 'Nothing submitted. This is for demonstration purposes only.',
+		const notification = new HTMLNotificationElement(`Hi, ${data.get('name')}`, {
+			body: 'Nothing has been submitted. This is for demonstration purposes only.',
 			icon: '/img/favicon.svg',
 			lang: 'en-us',
 			dir: 'ltr',
@@ -18,11 +19,13 @@ export async function submitHandler(event) {
 			vibrate: [500, 0, 0, 500],
 			requireInteraction: true,
 			data: {
-				name: data.get('name'),
-				email: data.get('email'),
-				phone: data.get('phone'),
-				subject: data.get('subject'),
-				body: data.get('body'),
+				form : {
+					name: data.get('name'),
+					email: data.get('email'),
+					phone: data.get('phone'),
+					subject: data.get('subject'),
+					body: data.get('body'),
+				}
 			},
 			actions: [{
 				title: 'Share',
@@ -41,8 +44,9 @@ export async function submitHandler(event) {
 		notification.addEventListener('notificationclick', async ({ action, notification }) => {
 			switch (action) {
 				case 'share':
+					notification.close();
 					if (navigator.canShare({title: '', text: '', url: location.href})) {
-						const { subject, body } = notification.data;
+						const { subject, body } = notification.data.form;
 						await navigator.share({
 							title: subject,
 							text: body,

@@ -14,28 +14,37 @@ import { $, ready } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { loadScript } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { importGa } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { submitHandler } from './contact-demo.js';
+import { ga } from './consts.js';
 
 $(':root').css({'--viewport-height': `${window.innerHeight}px`});
+
 $(window).debounce('resize', () => $(':root').css({'--viewport-height': `${window.innerHeight}px`}));
+
+$(window).on('scroll', () => {
+	requestAnimationFrame(() => {
+		$('#header').css({
+			'background-position-y': `${-0.5 * scrollY}px`,
+		});
+	});
+}, { passive: true });
 
 document.documentElement.classList.replace('no-js', 'js');
 document.documentElement.classList.toggle('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
 document.documentElement.classList.toggle('no-details', document.createElement('details') instanceof HTMLUnknownElement);
 
-if (document.documentElement.dataset.hasOwnProperty('googleAnalytics')) {
-	importGa(document.documentElement.dataset.googleAnalytics).catch(console.error);
+if (typeof ga === 'string' && ga.length !== 0) {
+	importGa(ga).catch(console.error);
 }
 
-Promise.all([ready(), loadScript('https://cdn.polyfill.io/v3/polyfill.min.js')]).then(() => {
-	$(window).on('scroll', () => {
-		requestAnimationFrame(() => {
-			$('#header').css({
-				'background-position-y': `${-0.5 * scrollY}px`,
-			});
-		});
-	}, { passive: true });
+Promise.all([
+	ready(),
+	loadScript('https://cdn.polyfill.io/v3/polyfill.min.js'),
+]).then(() => {
 
-	$('#contact-form').submit(submitHandler);
+	if (location.pathname.startsWith('/contact')) {
+		$('#contact-form').submit(submitHandler);
+	}
+
 
 	$('[data-scroll-to]').click(event => {
 		const target = document.querySelector(event.target.closest('[data-scroll-to]').dataset.scrollTo);
