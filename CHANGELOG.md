@@ -27,6 +27,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Put contact from in  a `<toast-message>`
 - Set RegEx pattern to validate entered phone numbers
 
+### Fixed
+- Add missing essentail options (like method) to contact form template
+
 # [v1.0.15] - 202500-07-23
 
 ### Added
