@@ -16,12 +16,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - `Notification` instead of `alert` on contact from submission
 - PWA shortcut (and icons) to changelog
+- Contact form template in `_includes/`
+- Support for Google Analytics via `consts.js` & `importGA()`
 
 ### Changed
 - Set `start_url` as `absolute_url` in production
 - Update various default colors
 - Add `theme-color` support on per-page level
 - Update share button for compatibility with CDN CSS changes
+- Put contact from in  a `<toast-message>`
+- Set RegEx pattern to validate entered phone numbers
 
 # [v1.0.15] - 202500-07-23
 

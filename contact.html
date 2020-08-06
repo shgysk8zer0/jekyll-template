@@ -12,46 +12,8 @@ scripts:
   referrerpolicy: no-referrer
   async: true # No harm in making it async since GET does not require service worker / `postMessage()`
 ---
-<div class="center">
-	<form name="contact" is="share-target" id="contact-form" class="card shadow">
-		<fieldset class="no-border align-left">
-			<div class="form-group">
-				<label for="name" class="input-label block required">
-					<b>Name</b>
-				</label>
-				<input type="text" name="name" id="name" class="input" autocomplete="name" placeholder="Firstname Lastname" required="" />
-			</div>
-			<div class="form-group">
-				<label for="email" class="input-label block required">
-					<b>Email</b>
-				</label>
-				<input type="email" name="email" id="email"  class="input" autocomplete="email" placeholder="user@example.com" required="" />
-			</div>
-			<div class="form-group">
-				<label for="phone" class="input-label block">
-					<b>Phone</b>
-				</label>
-				<input type="tel" name="phone" id="phone" class="input" autocomplete="tel" placeholder="+1-555-555-5555" required="" />
-			</div>
-			<div class="form-group">
-				<label for="subject" class="input-label block required">
-					<b>Subject</b>
-				</label>
-				<input type="text" name="subject" id="subject" class="input" class="input" data-share-field="title" placeholder="Message Subject" autocomplete="off" required="" />
-			</div>
-			<div class="form-group">
-				<label for="body" class="input-label block required">
-					<b>Message</b>
-				</label>
-				<textarea name="body" id="body" class="input" data-share-field="text" placeholder="Message body" autocomplete="off" required=""></textarea>
-			</div>
-		</fieldset>
-		<br />
-		<button type="submit" class="btn btn-accept btn-wide">
-			{% include icon.html icon="check" %}
-			<span>Send</span>
-		</button>
-	</form>
-</div>
-			</div>
-			
+<toast-message backdrop="" open="">
+	<div slot="content">
+		{% include contact-form.html phone=true subject=true legend="Demo Contact Form" %}
+	</div>
+</toast-message>
