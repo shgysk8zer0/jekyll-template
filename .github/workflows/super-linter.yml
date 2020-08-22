@@ -55,7 +55,7 @@ jobs:
           DEFAULT_BRANCH: master
           VALIDATE_YAML: true
           VALIDATE_JSON: true
-          VALIDATE_XML: true
+          # VALIDATE_XML: true
           VALIDATE_MD: true
           # VALIDATE_HTML: true
           VALIDATE_BASH: true
