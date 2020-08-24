@@ -1,3 +1,4 @@
+---
 author: Chris Zuber
 title: Jekyll Template Demo
 url: 'https://infallible-galileo-ac41ee.netlify.app'
@@ -20,18 +21,18 @@ description: "A template repository for Jekyll sites, including skeleton JS, CSS
 mobile-web-app-capable: true
 canonical: https://infallible-galileo-ac41ee.netlify.app/''
 keywords:
-- jekyll
-- static
-- template
-- github
-- CSS3
-- HTML5
-- responsive design
-- progressive web app
-- pwa
-- ecmascript
-- javascript
-- es6
+  - jekyll
+  - static
+  - template
+  - github
+  - CSS3
+  - HTML5
+  - responsive design
+  - progressive web app
+  - pwa
+  - ecmascript
+  - javascript
+  - es6
 repository:
   username: shgysk8zer0
   project: jekyll-template
@@ -48,82 +49,82 @@ icons: '/img/icons.svg'
 #   google:
 #   bing:
 defaults:
-- scope:
-    path: _posts
-  values:
-    layout: post
-    author:
-      givenName: Chris
-      familyName: Zuber
-      url: 'https://shgysk8zer0.github.io'
-      gravatar: '43578597e449298f5488c2407c8a8ae5'
-      github: shgysk8zer0
-      twitter: shgysk8zer0
-      linkedin: chris-zuber-455346141/
-    publisher:
-      name: 'KernValley.US'
-      url: 'https://kernvalley.us'
-      logo:
-        url: 'https://kernvalley.us/img/icon-256.png'
-    permalink: /posts/:categories/:year/:month/:day/:title/
-    comments: true
-    ads: false
-    index: true
-- scope:
-    path: _drafts
-  values:
-    layout: post
-    author:
-      givenName: Chris
-      familyName: Zuber
-      url: 'https://shgysk8zer0.github.io'
-      gravatar: '43578597e449298f5488c2407c8a8ae5'
-      github: 'shgysk8zer0'
-      twitter: shgysk8zer0
-    publisher:
-      name: 'KernValley.US'
-      url: 'https://kernvalley.us'
-      logo:
-        url: 'https://kernvalley.us/img/icon-256.png'
-    permalink: /posts/:categories/:year/:month/:day/:title/
-    comments: false
-    ads: false
+  - scope:
+      path: _posts
+    values:
+      layout: post
+      author:
+        givenName: Chris
+        familyName: Zuber
+        url: 'https://shgysk8zer0.github.io'
+        gravatar: '43578597e449298f5488c2407c8a8ae5'
+        github: shgysk8zer0
+        twitter: shgysk8zer0
+        linkedin: chris-zuber-455346141/
+      publisher:
+        name: 'KernValley.US'
+        url: 'https://kernvalley.us'
+        logo:
+          url: 'https://kernvalley.us/img/icon-256.png'
+      permalink: /posts/:categories/:year/:month/:day/:title/
+      comments: true
+      ads: false
+      index: true
+  - scope:
+      path: _drafts
+    values:
+      layout: post
+      author:
+        givenName: Chris
+        familyName: Zuber
+        url: 'https://shgysk8zer0.github.io'
+        gravatar: '43578597e449298f5488c2407c8a8ae5'
+        github: 'shgysk8zer0'
+        twitter: shgysk8zer0
+      publisher:
+        name: 'KernValley.US'
+        url: 'https://kernvalley.us'
+        logo:
+          url: 'https://kernvalley.us/img/icon-256.png'
+      permalink: /posts/:categories/:year/:month/:day/:title/
+      comments: false
+      ads: false
 plugins:
-- jekyll-gist
-- jekyll-youtube
-- jekyll-admin
-- jekyll-watch
-- jekyll-paginate
+  - jekyll-gist
+  - jekyll-youtube
+  - jekyll-admin
+  - jekyll-watch
+  - jekyll-paginate
 include:
 # Folders with dotfiles are ignored by default.
-- .well-known
-- _headers
-- _redirects
+  - .well-known
+  - _headers
+  - _redirects
 exclude:
-- ".gitkeep"
-- "*.rb"
-- "*.gemspec"
-- "*.php"
-- "*.sh"
-- "*.csv"
-- "*.sfd"
-- "*.ai"
-- "*.psd"
-- "*.sketch"
-- "*.yml"
-- "*.lock"
-- "*.log"
-- "*.config.js"
-- ".gitkeep"
-- docs/
-- "/.github/"
-- Gemfile
-- node_modules/
-- palette.xml
-- README.md
-- LICENSE
-- "/img/octicons/*.md"
-- "/img/octicons/LICENSE"
-- "/img/octicons/script"
-- "/img/adwaita-icons/docs"
-- "/img/adwaita-icons/LICENSE"
+  - ".gitkeep"
+  - "*.rb"
+  - "*.gemspec"
+  - "*.php"
+  - "*.sh"
+  - "*.csv"
+  - "*.sfd"
+  - "*.ai"
+  - "*.psd"
+  - "*.sketch"
+  - "*.yml"
+  - "*.lock"
+  - "*.log"
+  - "*.config.js"
+  - ".gitkeep"
+  - docs/
+  - "/.github/"
+  - Gemfile
+  - node_modules/
+  - palette.xml
+  - README.md
+  - LICENSE
+  - "/img/octicons/*.md"
+  - "/img/octicons/LICENSE"
+  - "/img/octicons/script"
+  - "/img/adwaita-icons/docs"
+  - "/img/adwaita-icons/LICENSE"
