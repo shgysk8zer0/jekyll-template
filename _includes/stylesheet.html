@@ -3,6 +3,6 @@
 	href="{{ include.href }}"
 	media="{{ include.media | default: 'all' }}"
 	{% if include.title %}title="{{ include.title }}"{% endif %}
-	{% if include.crossorigin %}crossorigin="{{ include.crossorigin }}"{% endif %}
-	{% if include.referrerpolicy %}referrerpolicy="{{ include.referrerpolicy }}"{% endif %}
+	{% if include.crossOrigin %}crossorigin="{{ include.crossOrigin }}"{% endif %}
+	{% if include.referrerPolicy %}referrerpolicy="{{ include.referrerPolicy }}"{% endif %}
 	{% if stylesheet.integrity %}integrity="{{ include.integrity }}"{% endif %} />

@@ -13,13 +13,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.0.16] 2020-09-06
+
 ### Added
 - `Notification` instead of `alert` on contact from submission
 - PWA shortcut (and icons) to changelog
 - Contact form template in `_includes/`
 - Support for Google Analytics via `consts.js` & `importGA()`
+- Track clicks for external links and `tel:` URIs
 
 ### Changed
+- Update preloading to have `crossOrigin` and `referrerPolicy` consistent
+- Use `"no-referrer"` as default referrer policy
 - Set `start_url` as `absolute_url` in production
 - Update various default colors
 - Add `theme-color` support on per-page level

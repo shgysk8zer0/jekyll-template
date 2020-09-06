@@ -1,0 +1,16 @@
+<div class="faq align-left">
+	<h3>{{ include.title | default: '<abbr title="Frequesntly Asked Questions">FAQ</abbr>' }}</h3>
+	{% for qa in include.faq %}
+		{% capture qid %}{{ qa.question strip_html | sluggify | downcase | replace: ' ', '-' | trim | escape }}{% endcapture %}
+		<dl aria-role="list" id="faq-{{ qid }}" class="faq-group" title="FAQ" itemprop="mainEntity" itemtype="https://schema.org/Question" itemscope="">
+			<dt class="faq-question">
+				<abbr title="Question"><b>Q:</b></abbr>
+				<b><q id="faq-q-{{ qid }}" itemprop="name">{{ qa.question }}?</q></b>
+			</dt>
+			<dd class="faq-answer" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" itemscope="">
+				<abbr title="Answer"><b>A</b>:</abbr>
+				<i id="faq-a-{{ qid }}" itemprop="text">{{ qa.answer }}</i>
+			</dd>
+		</dl>
+	{% endfor %}
+</div>

@@ -58,7 +58,7 @@ jobs:
           # VALIDATE_XML: true
           VALIDATE_MD: true
           # VALIDATE_HTML: true
-          VALIDATE_BASH: true
+          # VALIDATE_BASH: true
           # VALIDATE_PERL: true
           # VALIDATE_PHP_BUILTIN: true
           # VALIDATE_PYTHON: true
