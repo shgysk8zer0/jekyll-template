@@ -1,4 +1,4 @@
-export const ga = null;
+export const GA = null;
 
 export const site = {
 	title: 'Jekyll Template',

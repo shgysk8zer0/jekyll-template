@@ -12,7 +12,7 @@ paginate: 8
 paginate_path: "/page-:num/"
 viewport: "width=device-width, viewport-fit=cover"
 robots: 'follow, index'
-referrer: origin-when-cross-origin
+referrer: no-referrer
 manifest: /manifest.json
 tiles-config: /browserconfig.xml
 service_worker: "./service-worker.js"

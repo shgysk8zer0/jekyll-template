@@ -1,6 +1,6 @@
 {
   "name": "jekyll-template",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "private": true,
   "description": "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc.",
   "config": {
