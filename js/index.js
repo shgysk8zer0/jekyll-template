@@ -15,67 +15,49 @@ import { loadScript } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
 import { importGa } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { submitHandler } from './contact-demo.js';
 import { GA } from './consts.js';
+import { outbound, madeCall } from './analytics.js';
 
 $(':root').css({'--viewport-height': `${window.innerHeight}px`});
 
-$(window).debounce('resize', () => $(':root').css({'--viewport-height': `${window.innerHeight}px`}));
+requestIdleCallback(() => {
+	$(window).debounce('resize', () => $(':root').css({'--viewport-height': `${window.innerHeight}px`}));
 
-$(window).on('scroll', () => {
-	requestAnimationFrame(() => {
-		$('#header').css({
-			'background-position-y': `${-0.5 * scrollY}px`,
+	$(window).on('scroll', () => {
+		requestAnimationFrame(() => {
+			$('#header').css({
+				'background-position-y': `${-0.5 * scrollY}px`,
+			});
 		});
-	});
-}, { passive: true });
+	}, { passive: true });
+});
 
 document.documentElement.classList.replace('no-js', 'js');
 document.documentElement.classList.toggle('no-dialog', document.createElement('dialog') instanceof HTMLUnknownElement);
 document.documentElement.classList.toggle('no-details', document.createElement('details') instanceof HTMLUnknownElement);
 
 if (typeof GA === 'string' && GA.length !== 0) {
-	importGa(GA).then(async () => {
-		/* global ga */
-		ga('create', GA, 'auto');
-		ga('set', 'transport', 'beacon');
-		ga('send', 'pageview');
+	requestIdleCallback(() => {
+		importGa(GA).then(async () => {
+			/* global ga */
+			ga('create', GA, 'auto');
+			ga('set', 'transport', 'beacon');
+			ga('send', 'pageview');
 
+			await ready();
 
-		function outbound() {
-			ga('send', {
-				hitType: 'event',
-				eventCategory: 'outbound',
-				eventAction: 'click',
-				eventLabel: this.href,
-				transport: 'beacon',
-			});
-		}
-
-		function madeCall() {
-			ga('send', {
-				hitType: 'event',
-				eventCategory: 'call',
-				eventLabel: 'Called',
-				transport: 'beacon',
-			});
-		}
-
-		await ready();
-
-		$('a[rel~="external"]').click(outbound, { passive: true, capture: true });
-		$('a[href^="tel:"]').click(madeCall, { passive: true, capture: true });
-
+			$('a[rel~="external"]').click(outbound, { passive: true, capture: true });
+			$('a[href^="tel:"]').click(madeCall, { passive: true, capture: true });
+		});
 	});
 }
 
-Promise.all([
+Promise.allSettled([
 	ready(),
 	loadScript('https://cdn.polyfill.io/v3/polyfill.min.js'),
 ]).then(() => {
-
 	if (location.pathname.startsWith('/contact')) {
 		$('#contact-form').submit(submitHandler);
 	}
-
 
 	$('[data-scroll-to]').click(event => {
 		const target = document.querySelector(event.target.closest('[data-scroll-to]').dataset.scrollTo);
