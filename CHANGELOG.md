@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Use `_headers` for HTTP headers instead of `netlify.toml`
+
 ## [v1.0.16] 2020-09-06
 
 ### Added
