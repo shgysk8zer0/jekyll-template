@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `/reset` page for clearing all site data
+
 ### Changed
 - Use `_headers` for HTTP headers instead of `netlify.toml`
 
