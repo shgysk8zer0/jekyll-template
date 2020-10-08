@@ -13,8 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.0] - 2020-10-08
+
 ### Added
 - `/reset` page for clearing all site data
+- Enable submodules with Dependabot
+- Initial set of submodules with SVG icons
+- SVG icon config file
+- Add support for `<ad-block>` ads from KernValley.US Ads
 
 ### Changed
 - Use `_headers` for HTTP headers instead of `netlify.toml`
