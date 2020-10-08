@@ -1,0 +1,9 @@
+source: jekyll-template
+medium: web
+campaign: kv-ads
+sidebar:
+  - url: https://ads.kernvalley.us
+    label: Kern Valley Ads
+    description: Advertise on sites throughout the Kern River Valley
+    callToAction: Click here to get started!
+    layout: text
