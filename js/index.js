@@ -10,12 +10,12 @@ import 'https://cdn.kernvalley.us/components/bacon-ipsum.js';
 import 'https://cdn.kernvalley.us/components/leaflet/map.js';
 import 'https://cdn.kernvalley.us/components/leaflet/marker.js';
 import 'https://cdn.kernvalley.us/components/pwa/install.js';
+import 'https://cdn.kernvalley.us/components/ad/block.js';
 import { $, ready } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
 import { loadScript } from 'https://cdn.kernvalley.us/js/std-js/loader.js';
-import { importGa } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
+import { importGa, externalHandler, telHandler, mailtoHandler } from 'https://cdn.kernvalley.us/js/std-js/google-analytics.js';
 import { submitHandler } from './contact-demo.js';
 import { GA } from './consts.js';
-import { outbound, madeCall } from './analytics.js';
 
 $(':root').css({'--viewport-height': `${window.innerHeight}px`});
 
@@ -45,8 +45,9 @@ if (typeof GA === 'string' && GA.length !== 0) {
 
 			await ready();
 
-			$('a[rel~="external"]').click(outbound, { passive: true, capture: true });
-			$('a[href^="tel:"]').click(madeCall, { passive: true, capture: true });
+			$('a[rel~="external"]').click(externalHandler, { passive: true, capture: true });
+			$('a[href^="tel:"]').click(telHandler, { passive: true, capture: true });
+			$('a[href^="mailto:"]').click(mailtoHandler, { passive: true, capture: true });
 		});
 	});
 }

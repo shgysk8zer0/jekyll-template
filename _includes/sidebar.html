@@ -1,4 +1,20 @@
 <aside id="sidebar" class="card shadow">
 	{% if include.pinned-posts %}{% include pinned-posts.html count=layout.pinned-posts %}{% endif %}
+	{% for ad in site.data.ads.sidebar %}
+		{% include ad.html
+			id=ad.uuid
+			label=ad.label
+			image=ad.image
+			description=ad.description
+			url=ad.url
+			callToAction=ad.callToAction
+			theme=ad.theme
+			layout=ad.layout
+			imageFit=ad.imageFit
+			imagePosition=ad.imagePosition
+			campaign=ad.campaign
+			content='sidebar-ad'
+		%}
+	{% endfor %}
 	{% if include.recent-posts %}{% include recent-posts.html count=layout.recent-posts %}{% endif %}
 </aside>
