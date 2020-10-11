@@ -1,4 +1,4 @@
-<leaflet-map center="{{ include.geo.latitude }},{{ include.geo.longitude }}" zoom="{{ include.zoom | default: '13' }}" minzoom="{{ include.minzoom | default: 13 }}" maxzoom="{{ include.maxzoom | default: 15 }}" crossorigin="annonymous" zoomcontrol="" detectretina="" aria-hidden="true"{% if include.hidden %} hidden=""{% endif %}>
+<leaflet-map center="{{ include.geo.latitude }},{{ include.geo.longitude }}" zoom="{{ include.zoom | default: '13' }}" minzoom="{{ include.minzoom | default: 13 }}" maxzoom="{{ include.maxzoom | default: 15 }}" crossorigin="annonymous" loading="{{ include.loading | default: 'eager' }}" zoomcontrol="" detectretina="" aria-hidden="true"{% if include.hidden %} hidden=""{% endif %}>
 	<leaflet-marker latitude="{{ include.geo.latitude }}" longitude="{{ include.geo.longitude }}" open="">
 		{% if include.geo.url %}
 			<a href="{{ include.geo.url }}" rel="noopener external" slot="popup">
