@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Add UTM params to share buttons
+
 ## [v1.1.0] - 2020-10-08
 
 ### Added
