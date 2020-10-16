@@ -5,5 +5,8 @@
 	class="{{ include.position | default: 'fixed' }} btn btn-primary round shadow-dark color-alt border-hidden background-accent z-top"
 	aria-label="Share Page"
 	is="share-button"
+	source="{{ include.source | default: site.title | slugify }}"
+	{% if include.medium %}medium="{{ include.medium }}"{% endif %}
+	{% if include.content %}content="{{ include.content }}"{% endif %}
 	hidden=""
 >{% include icon.html icon='public-share' %}</button>
