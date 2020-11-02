@@ -74,7 +74,7 @@
     "eslint-plugin-async-await": "0.0.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-frontmatter": "0.0.8",
-    "netlify-cli": "^2.65.7",
+    "netlify-cli": "^2.67.1",
     "postcss": "^7.0.35",
     "postcss-cli": "^7.1.2",
     "postcss-cssnext": "^3.1.0",
