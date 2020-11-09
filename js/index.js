@@ -37,8 +37,7 @@ document.documentElement.classList.toggle('no-details', document.createElement('
 
 if (typeof GA === 'string' && GA.length !== 0) {
 	requestIdleCallback(() => {
-		importGa(GA).then(async () => {
-			/* global ga */
+		importGa(GA).then(async ({ ga }) => {
 			ga('create', GA, 'auto');
 			ga('set', 'transport', 'beacon');
 			ga('send', 'pageview');
