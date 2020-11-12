@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Add UTM params to share buttons
+- Ability to disable ads
+- Handling for page-level ads
 
 ## [v1.1.0] - 2020-10-08
 

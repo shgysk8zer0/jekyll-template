@@ -1,8 +1,26 @@
 <aside id="sidebar" class="card shadow">
 	{% if include.pinned-posts %}{% include pinned-posts.html count=layout.pinned-posts %}{% endif %}
+	{% if page.ads %}{% for ad in page.ads %}
+		{% include ad.html
+			id=ad.uuid
+			disabled=ad.disabled
+			label=ad.label
+			image=ad.image
+			description=ad.description
+			url=ad.url
+			callToAction=ad.callToAction
+			theme=ad.theme
+			layout=ad.layout
+			imageFit=ad.imageFit
+			imagePosition=ad.imagePosition
+			campaign=ad.campaign
+			content='sidebar-ad'
+		%}
+	{% endfor %}{% endif %}
 	{% for ad in site.data.ads.sidebar %}
 		{% include ad.html
 			id=ad.uuid
+			disabled=ad.disabled
 			label=ad.label
 			image=ad.image
 			description=ad.description
