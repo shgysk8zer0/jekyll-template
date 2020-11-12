@@ -6,4 +6,5 @@ sidebar:
     label: Kern Valley Ads
     description: Advertise on sites throughout the Kern River Valley
     callToAction: Click here to get started!
-    layout: text
+    image: https://ads.kernvalley.us/img/favicon.svg
+    layout: card
