@@ -1,5 +1,18 @@
 #nav {
 	padding: 0.6em;
 	font-size: 1.2em;
-	justify-content: space-around;
+}
+
+#install-btn, #app-menu {
+	background-color: transparent;
+	color: inherit;
+	border: none;
+}
+
+#install-btn {
+	margin-left: auto;
+}
+
+#install-btn > svg {
+	margin-bottom: 10px;
 }
