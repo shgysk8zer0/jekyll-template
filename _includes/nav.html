@@ -4,7 +4,7 @@
 	</button>
 	{% for link in site.data.nav-links %}
 		<a href="{{ link.href }}" class="nav-link center inline-block{% if link.href == page.url %} active no-pointer-events{% endif %}" title="{{ link.label | escape }}">
-			{% if include.icon %}{% include icon.html icon=link.icon %}<br />{% endif %}
+			{% if link.icon %}{% include icon.html icon=link.icon %}<br />{% endif %}
 			<span class="nav-link-label">{{ link.label }}</span>
 		</a>
 	{% endfor %}
