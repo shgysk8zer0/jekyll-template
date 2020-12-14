@@ -1,5 +1,5 @@
 <nav id="nav" class="sticky top shadow background-accent color-alt z-3 flex row nowrap overflow-x-auto">
-	<button type="button" is="app-list" id="app-menu" scope="{{ site.data.ads.source | default: site.title | escape }}" title="Show KRV Apps Menu" hidden="">
+	<button type="button" is="app-list" id="app-menu" source="{{ site.data.ads.source | default: site.title | escape }}" title="Show KRV Apps Menu" hidden="">
 		{% include icon.html icon="apps" height="22" width="22" fill="currentColor" %}
 	</button>
 	{% for link in site.data.nav-links %}
