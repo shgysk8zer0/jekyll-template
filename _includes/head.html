@@ -68,13 +68,13 @@
 	<meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
 	<title itemprop="headline">{{ page.title | default: 'Home' }} | {{ site.title }}</title>
 	{% if site.data.scripts %}{% for script in site.data.scripts[jekyll.environment] %}
-		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossOrigin referrerPolicy= script.referrerPolicy integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossOrigin=script.crossOrigin referrerPolicy= script.referrerPolicy integrity=script.integrity noModule=script.noModule %}
 	{% endfor %}{% endif %}
 	{% if layout.scripts %}{% for script in layout.scripts %}
-		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossOrigin referrerPolicy= script.referrerPolicy integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossOrigin=script.crossOrigin referrerPolicy= script.referrerPolicy integrity=script.integrity noModule=script.noModule %}
 	{% endfor %}{% endif %}
 	{% if page.scripts %}{% for script in page.scripts %}
-		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossorigin=script.crossOrigin referrerPolicy= script.referrerPolicy integrity=script.integrity nomodule=script.nomodule %}
+		{% include script.html src=script.src type=script.type async=script.async defer=script.defer crossOrigin=script.crossOrigin referrerPolicy= script.referrerPolicy integrity=script.integrity noModule=script.noModule %}
 	{% endfor %}{% endif %}
 	{% if site.manifest %}
 		<link rel="manifest" href="{{ site.manifest }}" />

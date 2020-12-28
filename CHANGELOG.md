@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `env` (`"production"` or `"development"`) and `dev` (`true` or `false`) constants
+
+### Changed
+- Load `polyfill.io` and custom elements shim as `<script nomodule>`
+- Standardize script template properties based on `HTMLScriptElement` properties
+
 ## [v1.1.1] - 2020-12-13
 
 ### Added
