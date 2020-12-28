@@ -19,7 +19,6 @@ const config = {
 		'/img/icons.svg',
 
 		/* JS */
-		'https://cdn.polyfill.io/v3/polyfill.min.js',
 		'https://cdn.kernvalley.us/components/share-target.js',
 
 		/* `customElements`templates */

@@ -43,7 +43,7 @@ dialog {
 	width: 3vmax;
 }
 
-button[is="share-button"] {
+button.btn[is="share-button"] {
 	bottom: 1rem;
 	right: 1rem;
 	border-radius: 50%;
