@@ -1,0 +1,48 @@
+<leaflet-marker id="{{ include.business.identifier }}" class="custom-element if-defined content-visibility-hidden" data-marker-type="{{ include.type | default: 'unknown' }}" latitude="{{ include.business.geo.latitude }}" longitude="{{ include.business.geo.longitude }}" title="{{ include.business.name | escape }}" itemtype="https://schema.org/{{ include.business['@type'] | default: 'LocalBusiness' }}" minzoom="{{ include.minZoom }}" maxzoom="{{ include.maxZoom }}" hidden="">
+	<script type="application/ld+json">{{ include.business | jsonify }}</script>
+	{% if include.business.logo.size != 0 and include.business.logo.first.encodingFormat == 'image/svg+xml' %}
+		<img slot="icon" src="{{ include.business.logo.first.url }}" crossorigin="anonymous" referrerpolicy="no-referrer" loading="lazy" decoding="async" height="30" width="30" alt="" />
+	{% else %}
+		{% include schema-icon.html place=include.business size=include.size %}
+	{% endif %}
+	<template slot="popup">
+		<div itemprop="geo" itemtype="https://schema.org/GeoCoordinates" itemscope="" hidden="">
+			<meta itemprop="latitude" content="{{ include.business.geo.latitude }}" />
+			<meta itemprop="longitude" content="{{ include.business.geo.longitude }}" />
+		</div>
+		<meta itemprop="priceRange" content="{{ include.business.priceRange }}" />
+		{% if include.business.image %}{% for img in include.business.image %}
+			<meta itemprop="image" content="{{ img.url }}" />
+		{% endfor %}{% else %}
+			<meta itemprop="image" content="/img/missing-image.png" />
+		{% endif %}
+		{% if include.business.logo %}{% for img in include.business.logo %}
+			<meta itemprop="image" content="{{ img.url }}" />
+		{% endfor %}{% endif %}
+		<h3 itemprop="name">{{ include.business.name }}</h3>
+		{% if include.business.description %}<blockquote itemprop="description">{{ include.business.description }}</blockquote>{% endif %}
+		{% if include.business.address %}{% include address.html address=include.business.address %}{% endif %}
+		{% if include.business.telephone %}<div><a href="tel:+{{ include.business.telephone }}" itemprop="telephone" content="{{ include.business.telephone }}">
+			<span>{{ include.business.telephone }}</span>
+			{% include icon.html icon="call-start" width="20" height="20" fill="currentColor" %}
+		</a></div>{% endif %}
+		{% if include.business.url %}<div><a href="{{ include.business.url }}" itemprop="url" rel="noopener noreferrer external">
+			<span>{{ include.business.url | replace: 'https://', '' | replace: 'www.', '' }}</span>
+			{% include icon.html icon="link-external" height="20" width="20" fill="currentColor" %}
+		</a></div>{% endif %}
+		{% if include.business.email %}<a href="mailto:{{ include.business.email | escape }}" itemprop="email" content="{{ include.business.email | escape }}">
+			<span>{{ include.business.email }}</span>
+			{% include icon.html icon="mail" fill="currentColor" height="20" width="20" %}
+		</a>{% endif %}
+		{% if include.business.openingHoursSpecification %}{% include openingHoursSpecification.html hours=include.business.openingHoursSpecification %}{% endif %}
+		<br />
+		<div>
+			<button type="button" is="share-button" text="Check out &quot;{{ business.name }}&quot; on {{ site.title }}" url="/#{{ business.identifier }}" hidden="">
+				<span>Share</span>
+				<svg height="18" width="18" fill="currentColor" role="img" aria-hidden="true">
+					<use xlink:href="/img/icons.svg#public-share"></use>
+				</svg>
+			</button>
+		</div>
+	</template>
+</leaflet-marker>

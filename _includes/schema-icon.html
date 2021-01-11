@@ -1,0 +1,62 @@
+{% case include.place['@type'] %}
+	{% when 'Restaurant' or 'FoodEstablishment' %}
+		{% include map-icon.html icon='restaurant' %}
+	{% when 'FastFoodRestaurant' %}
+		{% include map-icon.html icon='food' %}
+	{% when 'BarOrPub' %}
+		{% include map-icon.html icon='bar' %}
+	{% when 'CafeOrCoffeeShop' %}
+		{% include map-icon.html icon='cafe' %}
+	{% when 'Store' %}
+		{% include map-icon.html icon='shopping' %}
+	{% when 'Campground' %}
+		{% include map-icon.html icon='tent' %}
+	{% when 'Florist' %}
+		{% include map-icon.html icon='florist' %}
+	{% when 'Motel' or 'LodgingBusiness' or 'Hotel' %}
+		{% include map-icon.html icon='hotel' %}
+	{% when 'GasStation' %}
+		{% include map-icon.html icon='gas' %}
+	{% when 'Museum' %}
+		{% include map-icon.html icon='museum' %}
+	{% when 'MovieTheater' %}
+		{% include map-icon.html icon='movie-roll' %}
+	{% when 'AutoRepair' %}
+		{% include map-icon.html icon='engine-outline' %}
+	{% when 'BowlingAlley' %}
+		{% include map-icon.html icon='bowling' %}
+	{% when 'FinancialService' or 'BankOrCreditUnion' or 'AutomatedTeller' %}
+		{% include map-icon.html icon='atm' %}
+	{% when 'Hospital' %}
+		{% include map-icon.html icon='hospital' %}
+	{% when 'FireStation' %}
+		{% include map-icon.html icon='fire-truck' %}
+	{% when 'EmergencyService' %}
+		{% include map-icon.html icon='ambulance' %}
+	{% when 'PoliceStation' %}
+		{% include map-icon.html icon='police' %}
+	{% when 'Pharmacy' %}
+		{% include map-icon.html icon='pharmacy' %}
+	{% when 'Library' %}
+		{% include map-icon.html icon='library' %}
+	{% when 'PostOffice' %}
+		{% include map-icon.html icon='postage-stamp' %}
+	{% when 'BusStop' %}
+		{% include map-icon.html icon='bus' %}
+	{% when 'Cemetery' %}
+		{% include map-icon.html icon='grave-stone' %}
+	{% when 'Church' or 'PlaceOfWorship' %}
+		{% include map-icon.html icon='church' %}
+	{% when 'ParkingFacility' %}
+		{% include map-icon.html icon='parking' %}
+	{% when 'PublicToilet' %}
+		{% include map-icon.html icon='outhouse' %}
+	{% when 'RadioStation' %}
+		{% include map-icon.html icon='radio-tower' %}
+	{% when 'EventVenue' %}
+		{% include map-icon.html icon='event' %}
+	{% when 'EducationalOrganization' or 'School' or 'Preschool' or 'ElementarySchool' or 'MidddleSchool' or 'HighSchool' or 'CollegeOrUniversity' %}
+		{% include map-icon.html icon='school' %}
+	{% else %}
+		{% include map-icon.html icon='business' %}
+{% endcase %}
