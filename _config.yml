@@ -15,7 +15,7 @@ robots: 'follow, index'
 referrer: no-referrer
 manifest: /manifest.json
 tiles-config: /browserconfig.xml
-service_worker: "./service-worker.js"
+service_worker: /service-worker.js
 og-type: website
 description: "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc."
 mobile-web-app-capable: true
@@ -41,7 +41,7 @@ twitter: "shgysk8zer0"
 feed:
   url: /feed.rss
   type: application/rss+xml
-icons: '/img/icons.svg'
+icons: /img/icons.svg
 # discus-identifier:
 # google-analytics:
 # ad-sense:

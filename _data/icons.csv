@@ -12,8 +12,10 @@ check,img/octicons/check.svg
 facebook,img/logos/facebook.svg
 yelp,img/logos/yelp.svg
 tripadvisor,img/logos/tripadvisor.svg
-twitter,img/logos/mono/twitter.svg
-linkedin,img/logos/mono/linkedin.svg
+twitter,img/logos/twitter.svg
+linkedin,img/logos/linkedin.svg
+youtube,img/logos/youtube.svg
+mail,img/octicons/mail.svg
 mark-github,img/octicons/mark-github.svg
 repo,img/octicons/repo.svg
 issue-opened,img/octicons/issue-opened.svg
@@ -23,3 +25,5 @@ chevron-down,img/octicons/chevron-down.svg
 creative-commons-by-sa,img/logos/creative-commons-by-sa.svg
 x,img/octicons/x.svg
 apps,img/apps.svg
+address-book,img/adwaita-icons/mimetypes/x-office-address-book.svg
+calendar,img/octicons/calendar.svg

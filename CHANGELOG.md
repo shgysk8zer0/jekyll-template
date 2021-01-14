@@ -13,12 +13,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.2.0] - 2021-01-14
+
 ### Added
 - `env` (`"production"` or `"development"`) and `dev` (`true` or `false`) constants
+- New components for creating `<leaflet-marker>`s
+- Listing of apps in stores via `<app-stores>` element (uses `manifest.json`)
+- Add `"webapp"` as platform for web app manifest
 
 ### Changed
 - Load `polyfill.io` and custom elements shim as `<script nomodule>`
 - Standardize script template properties based on `HTMLScriptElement` properties
+- Numerous component updates
+- Manage links in single data file (`links.yml`)
+- Manage social links via data file (`social.yml`)
+- Use CDN version of service worker
+- Update web app manifest template to handle `shortcuts`, `related_applications`, etc.
+
+### Removed
+- Do not use `animate.css`
 
 ## [v1.1.1] - 2020-12-13
 

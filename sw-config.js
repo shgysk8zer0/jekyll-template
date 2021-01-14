@@ -1,25 +1,32 @@
 ---
 layout: null
 ---
-'use strict';
 /* eslint-env serviceworker */
 /* eslint no-unused-vars: 0 */
 
 const config = {
 	version: '{{ site.data.app.version | default: site.version }}',
 	fresh: [
-		/* Root document */
+		/* Root document, pages, and posts */
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
 		'{{ site.posts | where: "pinned", true | map: "url" | join: "', '" }}',
 	].map(path => new URL(path, location.origin).href),
-	stale: [
-		/* Other HTML */
-		'/css/index.min.css',
+	stale: [/* JS */
 		'/js/index.min.js',
-		'/img/icons.svg',
-
-		/* JS */
 		'https://cdn.kernvalley.us/components/share-target.js',
+
+		/* CSS */
+		'/css/index.min.css',
+		'https://cdn.kernvalley.us/components/toast-message.css',
+		'https://cdn.kernvalley.us/components/leaflet/map.css',
+		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.css',
+		'https://cdn.kernvalley.us/components/slide-show/slide-show.css',
+		'https://cdn.kernvalley.us/components/github/user.css',
+		'https://cdn.kernvalley.us/components/pwa/prompt.css',
+		'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css',
+
+		/* Data and JSON */
+		'/manifest.json',
 
 		/* `customElements`templates */
 		'https://cdn.kernvalley.us/components/toast-message.html',
@@ -29,35 +36,23 @@ const config = {
 		'https://cdn.kernvalley.us/components/github/user.html',
 		'https://cdn.kernvalley.us/components/pwa/prompt.html',
 
-		/* CSS */
-		'https://cdn.kernvalley.us/components/toast-message.css',
-		'https://cdn.kernvalley.us/components/leaflet/map.css',
-		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.css',
-		'https://cdn.kernvalley.us/components/slide-show/slide-show.css',
-		'https://cdn.kernvalley.us/components/github/user.css',
-		'https://cdn.kernvalley.us/components/pwa/prompt.css',
-		'https://unpkg.com/leaflet@1.6.0/dist/leaflet.css',
-
 		/* Images & Icons */
+		'/img/icons.svg',
+		'/img/neon.svg',
 		'/img/apple-touch-icon.png',
 		'/img/icon-512.png',
 		'/img/icon-192.png',
 		'/img/icon-32.png',
 		'/img/favicon.svg',
-
-		/* Social Icons for Web Share API shim */
-		'https://cdn.kernvalley.us/img/octicons/mail.svg',
-		'https://cdn.kernvalley.us/img/logos/facebook.svg',
-		'https://cdn.kernvalley.us/img/logos/twitter.svg',
-		'https://cdn.kernvalley.us/img/logos/linkedin.svg',
-		'https://cdn.kernvalley.us/img/logos/reddit.svg',
-		'https://cdn.kernvalley.us/img/logos/gmail.svg',
+		'https://cdn.kernvalley.us/img/keep-kern-clean.svg',
+		'https://cdn.kernvalley.us/img/logos/play-badge.svg',
+		'https://cdn.kernvalley.us/img/logos/itunes-badge.svg',
+		'https://cdn.kernvalley.us/img/logos/windows-badge.svg',
 		'https://cdn.kernvalley.us/img/logos/instagram.svg',
+		'https://cdn.kernvalley.us/img/markers.svg',
 
 		/* Fonts */
 		'https://cdn.kernvalley.us/fonts/roboto.woff2',
-		'https://cdn.kernvalley.us/fonts/Libertine.woff',
-		'https://cdn.kernvalley.us/fonts/ubuntu.woff2',
 		/* Other */
 	].map(path => new URL(path, location.origin).href),
 	allowed: [
@@ -66,6 +61,7 @@ const config = {
 		/https:\/\/secure\.gravatar\.com\/avatar\/*/,
 		/https:\/\/*\.githubusercontent\.com\/u\/*/,
 		/https:\/\/api\.github\.com\/users\/*/,
+		/https:\/\/api\.openweathermap\.org\/*/,
 		/https:\/\/baconipsum\.com\/api\/*/,
 	],
 };

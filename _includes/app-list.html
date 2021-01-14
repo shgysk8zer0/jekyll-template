@@ -1,0 +1,18 @@
+<div class="flex row wrap app-stores">
+	{% for app in include.apps %}
+		{% case app.platform %}
+			{% when 'play' %}
+				<a href="https://play.google.com/store/apps/details?id={{ app.id | escape }}" rel="noopener noreferrer" class="inline-block app-store">
+					<img src="https://cdn.kernvalley.us/img/logos/play-badge.svg" alt="Google Play" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" height="53" width="180" />
+				</a>
+			{% when 'itunes' %}
+				<a href="{{ app.url | }}" rel="noopener noreferrer" class="inline-block app-store">
+					<img src="https://cdn.kernvalley.us/img/logos/itunes-badge.svg" alt="App Store" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" height="53" width="158" />
+				</a>
+			{% when 'windows' %}
+				<a href="{{ app.url | }}" rel="noopener noreferrer" class="inline-block app-store">
+					<img src="https://cdn.kernvalley.us/img/logos/windows-badge.svg" alt="Microsoft Store" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" height="53" width="147" />
+				</a>
+		{% endcase %}
+	{% endfor %}
+</div>
