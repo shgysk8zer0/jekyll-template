@@ -73,14 +73,14 @@
 	{% endif %}
 	<hr />
 	<div class="copyright flex wrap space-evenly">
-		<github-user user="{{ site.repository.username }}" loading="lazy">
-			<h3 slot="header" class="center">Created By</h3>
+		<github-user user="{{ site.repository.username }}" loading="lazy" class="custom-element">
+			<h3 slot="header" class="center if-defined">Created By</h3>
 			<div slot="footer">
 				<span>&copy;</span>
 				<time itemprop="copyrightYear">{{ 'now' | date: '%Y' }}</time>
-				<span itemprop="copyrightHolder" itemtype="https://schema.org/Organization" itemscope="" hidden="">
-					<a href="https://kernvalley.us" target="_blank" rel="external noopener noreferrer" itemprop="url">
-						<span itemprop="name">KernValley.US</span>
+				<span itemprop="copyrightHolder" itemtype="https://schema.org/{{ site.data.publisher['@type'] | default: 'Organization' }}" itemscope="">
+					<a href="{{ site.data.publisher.url }}" target="_blank" rel="external noopener noreferrer" itemprop="url">
+						<span itemprop="name">{{ site.data.publisher.name }}</span>
 					</a>
 				</span>
 			</div>

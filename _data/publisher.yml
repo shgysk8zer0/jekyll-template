@@ -1,0 +1,9 @@
+'@context': https://schema.org
+'@type': Person
+name: KernValley.US
+url: https://kernvalley.us
+sameAs:
+  - https://www.facebook.com/KernValley.us/
+  - https://twitter.com/kern_valley
+  - https://instagram.com/kernvalley_us/
+  - https://www.linkedin.com/company/18644791/

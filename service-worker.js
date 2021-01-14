@@ -9,7 +9,7 @@ const CDN = 'https://cdn.kernvalley.us/';
 // const CDN = 'https://deploy-preview-419--hardcore-bhaskara-69a703.netlify.app/';
 
 try {
-	self.importScripts(new URL('./service-worker.js', CDN), 'sw-config.js');
+	self.importScripts(new URL('./service-worker.js', CDN), '/sw-config.js');
 
 	if (init instanceof Function && typeof config === 'object') {
 		init(self, config);

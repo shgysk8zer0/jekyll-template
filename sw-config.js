@@ -2,7 +2,7 @@
 layout: null
 ---
 /* eslint-env serviceworker */
-/* global config: writable */
+/* eslint no-unused-vars: 0 */
 
 const config = {
 	version: '{{ site.data.app.version | default: site.version }}',
