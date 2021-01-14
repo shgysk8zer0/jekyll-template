@@ -4,7 +4,7 @@ campaign: kv-ads
 sidebar:
   - url: https://ads.kernvalley.us
     label: Kern Valley Ads
-    description: Advertise on sites throughout the Kern River Valley
+    description: Advertise on local websites throughout the Kern River Valley
     callToAction: Click here to get started!
-    image: https://ads.kernvalley.us/img/favicon.svg
+    image: https://cdn.kernvalley.us/img/branding/ads.kernvalley.us.svg
     layout: card

@@ -1,50 +1,90 @@
 <footer id="footer">
-	<div class="social-links cols-2">
-		{% if site.repository %}
-			<div class="cols">
-				<a class="block" href="https://github.com/{{ site.repository.username }}/" target="_blank" rel="external noopener">
+	<div class="flex row wrap space-around footer-links">
+		{% if site.data.links.footer %}
+			<div class="inline-block footer-links">
+				{% for link in site.data.links.footer %}
+					<a href="{{ link.href }}" class="block" target="{{ link.target | default: '_self' }}" rel="{{ link.rel | join: ' ' }}">
+						{% if link.icon %}{% include icon.html icon=link.icon fill="currentColor" height="24" width="24" %}{% endif %}
+						<span>{{ link.label }}</span>
+					</a>
+				{% endfor %}
+			</div>
+		{% endif %}{% if site.data.social %}
+			<div class="inline-block footer-links">
+				{% if site.data.social.facebook %}
+					<a class="block" href="{{ site.data.social.facebook }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include icon.html icon="facebook" class="social-icon" fill="currentColor" width="20" height="20" %}
+						<span>Facebook</span>
+					</a>
+				{% endif %}{% if site.data.social.twitter %}
+					<a class="block" href="{{ site.data.social.twitter }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include icon.html icon="twitter" class="social-icon" fill="currentColor" width="20" height="20" %}
+						<span>Twitter</span>
+					</a>
+				{% endif %}{% if site.data.social.instagram %}
+					<a class="block" href="{{ site.data.social.instagram }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						<img src="https://cdn.kernvalley.us/img/logos/instagram.svg" class="social-icon" width="20" height="20" loading="lazy" decoding="async" crossorigin="anonymous" referrerpolicy="no-referrer" alt="" />
+						<span>Instagram</span>
+					</a>
+				{% endif %}{% if site.data.social.linkedIn %}
+					<a class="block" href="{{ site.data.social.linkedIn }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include icon.html icon="linkedin" class="icon social-icon" height="20" width="20" %}
+						<span>LinkedIn</span>
+					</a>
+				{% endif %}{% if site.data.social.youtube %}
+					<a class="block" href="{{ site.data.social.youtube }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include icon.html icon="youtube" class="icon social-icon" height="20" width="20"%}
+						<span>YouTube</span>
+					</a>
+				{% endif %}{% if site.data.social.yelp %}
+					<a class="block" href="{{ site.data.social.yelp }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include icon.html icon="yelp" class="icon social-icon" height="20" width="20"%}
+						<span>Yelp</span>
+					</a>
+				{% endif %}{% if site.data.social.tripAdvisor %}
+					<a class="block" href="{{ site.data.social.tripAdvisor }}" target="_blank" rel="noopener noreferrer external" itemprop="sameAs">
+						{% include icon.html icon="tripadvisor" class="icon social-icon" height="20" width="20"%}
+						<span>TripAdvisor</span>
+					</a>
+				{% endif %}
+			</div>
+		{% endif %}{% if site.repository %}
+			<div class="inline-block">
+				<a class="block" href="https://github.com/{{ site.repository.username }}/" target="_blank" rel="noopener noreferrer external">
 					{% include icon.html icon="mark-github" class="current-color icon social-icon" %}
 					<span>GitHub Profile</span>
 				</a>
-				<a class="block" href="https://github.com/{{ site.repository.username }}/{{ site.repository.project }}" target="_blank" rel="external noopener">
+				<a class="block" href="https://github.com/{{ site.repository.username }}/{{ site.repository.project }}" target="_blank" rel="noopener noreferrer external">
 					{% include icon.html icon="repo" class="current-color icon social-icon" %}
 					<span>GitHub Repo</span>
 				</a>
-				<a class="block" href="https://github.com/{{ site.repository.username }}/{{ site.repository.project }}/issues" target="_blank" rel="external noopener">
+				<a class="block" href="https://github.com/{{ site.repository.username }}/{{ site.repository.project }}/issues" target="_blank" rel="noopener noreferrer external">
 					{% include icon.html icon="issue-opened" class="current-color icon social-icon" %}
 					<span>Report a Problem</span>
 				</a>
 			</div>
 		{% endif %}
-		<div class="cols">
-			<a class="block" href="https://shgysk8zer0.github.io" target="_blank" rel="external noopener" itemprop="sameAs">
-				{% include icon.html icon="web-browser" class="current-color icon social-icon" %}
-				<span>My Website</span>
-			</a>
-			<a class="block" href="https://twitter.com/shgysk8zer0" target="_blank" rel="external noopener" itemprop="sameAs">
-				{% include icon.html icon="twitter" class="current-color icon social-icon" %}
-				<span>On Twitter</span>
-			</a>
-			<a class="block" href="https://www.linkedin.com/in/chris-zuber-455346141/" target="_blank" rel="external noopener" itemprop="sameAs">
-				{% include icon.html icon="linkedin" class="current-color icon social-icon" %}
-				<span>LinkedIn</span>
-			</a>
-		</div>
 	</div>
+	{% if site.data.app.related_applications %}
+		<div>
+			<hr />
+			<app-stores id="store-list" class="flex row wrap app-stores"></app-stores>
+		</div>
+	{% endif %}
 	<hr />
-	<div class="copyright">
+	<div class="copyright flex wrap space-evenly">
 		<github-user user="{{ site.repository.username }}" loading="lazy">
 			<h3 slot="header" class="center">Created By</h3>
 			<div slot="footer">
 				<span>&copy;</span>
 				<time itemprop="copyrightYear">{{ 'now' | date: '%Y' }}</time>
-				<span itemprop="copyrightHolder" itemtype="https://schema.org/Person" itemscope="" hidden="">
-					<a href="https://shgysk8zer0.github.io" target="_blank" rel="external noopener" itemprop="url">
-						<span itemprop="givenName">Chris</span>
-						<span itemprop="familyName">Zuber</span>
+				<span itemprop="copyrightHolder" itemtype="https://schema.org/Organization" itemscope="" hidden="">
+					<a href="https://kernvalley.us" target="_blank" rel="external noopener noreferrer" itemprop="url">
+						<span itemprop="name">KernValley.US</span>
 					</a>
 				</span>
 			</div>
 		</github-user>
+		{% include keep-kern-clean.html %}
 	</div>
 </footer>
