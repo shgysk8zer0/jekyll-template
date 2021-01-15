@@ -1,5 +1,5 @@
 <div class="flex row wrap app-stores">
-	{% for app in include.apps %}
+	{% for app in include.apps | where_exp: 'app', 'app.platform != "webapp"' %}
 		{% case app.platform %}
 			{% when 'play' %}
 				<a href="https://play.google.com/store/apps/details?id={{ app.id | escape }}" rel="noopener noreferrer" class="inline-block app-store">
