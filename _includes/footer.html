@@ -64,12 +64,10 @@
 				</a>
 			</div>
 		{% endif %}
-	</div>
-	{% if site.data.app.related_applications %}
-		<div>
-			<hr />
-			<app-stores id="store-list" class="flex row wrap app-stores"></app-stores>
-		</div>
+	</div>{% assign app = site.data.app.related_applications | find_exp: "app", "app.platform != 'webapp'" %}
+	{% if app %}
+		<hr />
+		<app-stores id="store-list" class="flex row wrap app-stores"></app-stores>
 	{% endif %}
 	<hr />
 	<div class="copyright flex wrap space-evenly">
