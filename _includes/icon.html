@@ -1,3 +1,0 @@
-<svg class="{{ include.class | default: 'icon current-color' }}"{% if include.width %} width="{{ include.width}}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %} {%if include.fill %}fill="{{ include.fill }}"{% endif %} role="{{ include.role | default: 'img' }}"{% if include.labelledBy %} aria-labelldby="{{ include.labelledBy }}"{% endif %}{% if include.label %} aria-label="{{ include.label }}"{% endif %} aria-hidden="{{ include.ariaHidden | default: 'true'}}">
-	<use xlink:href="{{ '#' | prepend: site.data.app.icons-file | append: include.icon  }}"></use>
-</svg>

@@ -17,6 +17,7 @@ manifest: /manifest.json
 tiles-config: /browserconfig.xml
 service_worker: /service-worker.js
 og-type: website
+keep-kern-clean: true
 description: "A template repository for Jekyll sites, including skeleton JS, CSS, SVGs, fonts, etc."
 mobile-web-app-capable: true
 canonical: https://infallible-galileo-ac41ee.netlify.app/''

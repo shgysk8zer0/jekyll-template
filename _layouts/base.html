@@ -10,7 +10,7 @@
 	itemtype="{{ page.itemtype | default: 'http://schema.org/WebPage' }}"
 	itemscope=""
 >
-{% include head.html %}
+{% include common/head.html %}
 	<body
 		id="top"
 		{% if page.scene %}data-scene="{{ page.scene }}"{% endif %}
