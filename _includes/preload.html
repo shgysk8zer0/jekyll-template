@@ -1,8 +1,0 @@
-<link rel="preload" href="{{ include.href }}" as="{{ include.as | default: 'fetch' }}"
-	{% if include.type %}type="{{ include.type }}"{% endif %}
-	{% if include.crossOrigin %}crossorigin="{{ include.crossOrigin }}"{% endif %}
-	{% if include.referrerPolicy %}referrerpolicy="{{ include.referrerPolicy }}"{% endif %}
-	importance="{{ include.importance | default: 'auto' }}"
-	{% if include.integrity %}integrity="{{ include.integrity }}"{% endif %}
-	{% if include.media %}media="{{ include.media }}"{% endif %}
-	/>

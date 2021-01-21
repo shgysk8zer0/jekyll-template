@@ -1,9 +1,9 @@
 <div id="contact-section" class="clearfix font-article background-primary color-default" itemtype="http://schema.org/Person" itemprop="about" itemscope="">
 	<a href="/" title="Home" class="fixed top left color-alt filter-shadow-dark bigger">
-		{% include icon.html icon='home' %}
+		{% include common/icon.html icon='home' %}
 	</a>
 	<figure itemprop="image" itemtype="http://schema.org/ImageObject" itemscope="" class="float-left">
-		{% include gravatar.html
+		{% include common/gravatar.html
 			gravatar=include.person.image.gravatar
 			sizes='(min-aspect-ratio: 3/2) 100vh, 100vw'
 			itemprop='url'
@@ -20,13 +20,13 @@
 			<dialog id="org-info-dialog" class="background-primary">
 				<header class="sticky top clearfix">
 					<button data-close="#org-info-dialog" class="font-main filter-shadow background-none color-default float-right">
-						{% include icon.html icon='close' %}
+						{% include common/icon.html icon='close' %}
 					</button>
 				</header>
 				{% include business-info.html organization=include.person.worksFor itemprop='worksFor' %}
 			</dialog>
 			<h3>
-				{% include icon.html icon='organization' %}
+				{% include common/icon.html icon='organization' %}
 				<span itemprop="jobTitle">{{ include.person.jobTitle }}</span>
 				<span>@</span>
 				<span data-show-modal="#org-info-dialog" class="color-inherit underline">{{ include.person.worksFor.name }}</span>
@@ -34,17 +34,17 @@
 			<hr />
 		{% elsif include.person.jobTitle %}
 			<h3>
-				{% include icon.html icon='organization' %}
+				{% include common/icon.html icon='organization' %}
 				<span itemprop="jobTitle">{{ include.person.jobTitle }}</span>
 			</h3>
 		{% endif %}
 		{% if include.person.homeLocation %}
-			{% include address.html address=include.person.homeLocation.address itemprop='homeLocation' %}
+			{% include common/address.html address=include.person.homeLocation.address itemprop='homeLocation' %}
 		{% endif %}
 		{% if include.person.description %}
 			<hr />
 			<div class="clearfix">
-				{% include icon.html icon='note' class='icon current-color float-left' %}
+				{% include common/icon.html icon='note' class='icon current-color float-left' %}
 				<blockquote class="float-left" itemprop="description">{{ include.person.description }}</blockquote>
 			</div>
 			<hr />

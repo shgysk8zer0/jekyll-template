@@ -5,7 +5,7 @@
 	class="{{ include.class | default: 'card background-default shadow-dark' }}"
 	{% if include.id %}id="{{ include.id }}"{% endif %}
 >
-	{% include imgur.html
+	{% include common/imgur.html
 		url=include.imgur
 		sizes=include.sizes
 		alt=include.alt
