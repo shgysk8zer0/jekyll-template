@@ -2,7 +2,7 @@
 	<leaflet-marker latitude="{{ include.geo.latitude }}" longitude="{{ include.geo.longitude }}" open="">
 		{% if include.geo.url %}
 			<a href="{{ include.geo.url }}" rel="noopener external" slot="popup">
-				{% include icon.html icon="link-external" height="16" width="16" %}
+				{% include common/icon.html icon="link-external" height="16" width="16" %}
 				<div>{{ include.geo.name }}</div>
 				{% if include.content %}{{ include.content }}{% endif %}
 			</a>

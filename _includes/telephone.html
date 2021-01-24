@@ -1,4 +1,0 @@
-<a href="tel:{{ include.telephone }}" class="color-inherit" content="{{ include.telephone }}" itemprop="{{ include.itemprop | default: 'telephone'}}">
-	{% include common/icon.html icon='call-start' %}
-	<span>{{ include.telephone | replace: '+', '' }}</span>
-</a>

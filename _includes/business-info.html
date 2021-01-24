@@ -19,15 +19,15 @@
 			<blockquote itemprop="description">{{ include.organization.description }}</blockquote>
 		{% endif %}
 		{% if include.organization.url %}
-			{% include url.html url=include.organization.url %}
+			{% include common/url.html url=include.organization.url %}
 			<hr />
 		{% endif %}
 		{% if include.organization.email %}
-			{% include email.html email=include.organization.email %}
+			{% include common/email.html email=include.organization.email %}
 			<hr />
 		{% endif %}
 		{% if include.organization.telephone %}
-			{% include telephone.html telephone=include.organization.telephone %}
+			{% include common/telephone.html telephone=include.organization.telephone %}
 			<hr />
 		{% endif %}
 	</div>

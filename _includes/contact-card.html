@@ -50,15 +50,15 @@
 			<hr />
 		{% endif %}
 		{% if include.person.telephone %}
-			{% include telephone.html telephone=include.person.telephone %}
+			{% include common/telephone.html telephone=include.person.telephone %}
 		<hr />
 		{% endif %}
 		{% if include.person.email %}
-			{% include email.html email=include.person.email %}
+			{% include common/email.html email=include.person.email %}
 			<hr />
 		{% endif %}
 		{% if include.person.url %}
-			{% include url.html url=include.person.url %}
+			{% include common/url.html url=include.person.url %}
 			<hr />
 		{% endif %}
 		{% if include.person.sameAs %}
