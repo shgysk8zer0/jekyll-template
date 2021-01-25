@@ -10,3 +10,6 @@
 [submodule "_includes/common"]
 	path = _includes/common
 	url = https://github.com/shgysk8zer0/jekyll-common.git
+[submodule "_includes/articles"]
+	path = _includes/articles
+	url = https://github.com/shgysk8zer0/jekyll-articles.git

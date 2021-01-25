@@ -14,7 +14,7 @@ prerender:
 	<div class="grid grid-gallery">
 		{% for post in paginator.posts %}
 			<div class="article-preview card shadow-dark">
-				{% include post-preview.html post=post %}
+				{% include articles/post-preview.html post=post %}
 			</div>
 		{% endfor %}
 	</div>
@@ -22,7 +22,7 @@ prerender:
 		<footer class="paginate-nav">
 			{% if paginator.previous_page %}
 				<a href="{{ paginator.previous_page_path  }}" rel="prev" role="button" title="Previous page">
-					{% include icon.html icon='prev' %}
+					{% include common/icon.html icon='prev' %}
 				</a>
 			{% endif %}
 			{% if paginator.next_page %}
