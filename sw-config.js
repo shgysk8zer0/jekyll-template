@@ -11,7 +11,8 @@ const config = {
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
 		'{{ site.posts | where: "pinned", true | map: "url" | join: "', '" }}',
 	].map(path => new URL(path, location.origin).href),
-	stale: [/* JS */
+	stale: [
+		/* JS */
 		'/js/index.min.js',
 		'https://cdn.kernvalley.us/components/share-target.js',
 
@@ -53,15 +54,16 @@ const config = {
 
 		/* Fonts */
 		'https://cdn.kernvalley.us/fonts/roboto.woff2',
-		/* Other */
 	].map(path => new URL(path, location.origin).href),
 	allowed: [
-		/https:\/\/maps\.wikimedia\.org\/osm-intl\/*/,
-		/https:\/\/i\.imgur\.com\/*/,
-		/https:\/\/secure\.gravatar\.com\/avatar\/*/,
+		'https://maps.wikimedia.org/osm-intl/',
+		'/https://i.imgur.com/',
+		'/https://secure.gravatar.com/avatar/',
 		/https:\/\/*\.githubusercontent\.com\/u\/*/,
-		/https:\/\/api\.github\.com\/users\/*/,
-		/https:\/\/api\.openweathermap\.org\/*/,
-		/https:\/\/baconipsum\.com\/api\/*/,
 	],
+	allowedFresh: [
+		'https://baconipsum.com/api/',
+		'https://api.github.com/users/',
+		'https://api.openweathermap.org/data/',
+	]
 };
