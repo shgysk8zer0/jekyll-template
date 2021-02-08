@@ -106,7 +106,7 @@ share_target:
   params:
     title: subject
     text: body
-# iarc_rating_id: e84b072d-71b3-4d3e-86ae-31a8ce4e53b7
+# iarc_rating_id:
 related_applications:
   - platform: webapp
     url: /manifest.json
