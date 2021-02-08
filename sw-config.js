@@ -10,6 +10,8 @@ const config = {
 		/* Root document, pages, and posts */
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
 		'{{ site.posts | where: "pinned", true | map: "url" | join: "', '" }}',
+		'/manifest.json',
+		'https://apps.kernvalley.us/apps.json',
 	].map(path => new URL(path, location.origin).href),
 	stale: [
 		/* JS */
@@ -56,6 +58,8 @@ const config = {
 		'https://cdn.kernvalley.us/fonts/roboto.woff2',
 	].map(path => new URL(path, location.origin).href),
 	allowed: [
+		'https://www.google-analytics.com/analytics.js',
+		'https://www.googletagmanager.com/gtag/js',
 		'https://maps.wikimedia.org/osm-intl/',
 		'/https://i.imgur.com/',
 		'/https://secure.gravatar.com/avatar/',
