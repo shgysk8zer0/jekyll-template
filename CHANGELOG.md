@@ -13,6 +13,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.3.0] - 2021-02-16
+
+### Added
+- GitHub auto-release on tag workflow
+
+### Changed
+- Update dependabot config
+- Replace all npm packages with `netlify-js-app` package (provides all of them)
+
 ## [v1.2.1] - 2021-01-20
 
 ### Changed
