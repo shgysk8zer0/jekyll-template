@@ -1,0 +1,50 @@
+---
+name: business-directory
+layout: default
+theme: default
+data-layout: default
+itemtype: https://schema.org/CollectionPage
+---
+{% include common/share-buttons.html facebook=true twitter=true linkedin=true %}
+{% if page.category %}
+	{% assign places = site.data.places[page.category] | sort: "name" %}
+	<section class="directory grid" itemprop="about" itemtype="https://schema.org/ItemList" itemscope="">
+		{% for place in places %}
+			{% if place.address.streetAddress or place.telephone or place.url or place.sameAs %}
+				{% include business-listing.html place=place %}
+			{% endif %}
+		{% endfor %}
+	</section>
+{% elsif page.categories %}
+	{% for type in page.categories %}
+		{% assign groups = site.data.places[type] | sort: "name" | group_by: "@type" %}
+		{% for group in groups %}
+			<section class="categories-section card shadow" itemprop="about" itemtype="https://schema.org/ItemList" itemscope="">
+				<h3 class="directory-label sticky top z-1 shadow background-accent color-alt" itemprop="name">{% include common/schema-type.html type=group.name %}</h3>
+				<div class="directory grid">
+					{% for place in group.items %}
+						{% if place.address.streetAddress or place.telephone or place.url or place.sameAs %}
+							{% include business-listing.html place=place %}
+						{% endif %}
+					{% endfor %}
+				</div>
+			</section>
+		{% endfor %}
+	{% endfor %}
+{% endif %}
+<button type="button" id="search-btn" class="btn btn-primary shadow bottom left fixed round z-4" title="Search on Page" accesskey="f" data-show-modal="#search-dialog">
+	{% include common/icon.html icon="search" width="25" height="25" fill="current-color" %}
+</button>
+<dialog id="search-dialog">
+	<form name="searchForm" id="searchForm">
+		<label for="business-name">Name</label>
+		<input type="search" name="name" id="business-name" list="business-list" autocomplete="off" required="" />
+		<button type="submit" class="btn btn-accept" title="Search" data-close="#search-dialog">
+			{% include common/icon.html icon="check" width="18" height="18" fill="currentColor" %}
+		</button>
+		<button type="reset" class="btn btn-reject" title="Cancel" data-close="#search-dialog">
+			{% include common/icon.html icon="x" width="18" height="18" fill="currentColor" %}
+		</button>
+		<datalist id="business-list"></datalist>
+	</form>
+</dialog>

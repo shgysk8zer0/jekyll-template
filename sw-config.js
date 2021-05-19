@@ -25,7 +25,7 @@ const config = {
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.css',
 		'https://cdn.kernvalley.us/components/slide-show/slide-show.css',
 		'https://cdn.kernvalley.us/components/github/user.css',
-		'https://cdn.kernvalley.us/components/pwa/prompt.css',
+		'https://cdn.kernvalley.us/components/install/prompt.css',
 		'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css',
 
 		/* Data and JSON */
@@ -37,7 +37,7 @@ const config = {
 		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.html',
 		'https://cdn.kernvalley.us/components/slide-show/slide-show.html',
 		'https://cdn.kernvalley.us/components/github/user.html',
-		'https://cdn.kernvalley.us/components/pwa/prompt.html',
+		'https://cdn.kernvalley.us/components/install/prompt.html',
 
 		/* Images & Icons */
 		'/img/icons.svg',
@@ -58,16 +58,18 @@ const config = {
 		'https://cdn.kernvalley.us/fonts/roboto.woff2',
 	].map(path => new URL(path, location.origin).href),
 	allowed: [
-		'https://www.google-analytics.com/analytics.js',
-		'https://www.googletagmanager.com/gtag/js',
 		'https://maps.wikimedia.org/osm-intl/',
 		'/https://i.imgur.com/',
 		'/https://secure.gravatar.com/avatar/',
 		/https:\/\/*\.githubusercontent\.com\/u\/*/,
+		/\.(jpg|png|webp|svg|gif)$/,
 	],
 	allowedFresh: [
+		'https://www.google-analytics.com/analytics.js',
+		'https://www.googletagmanager.com/gtag/js',
 		'https://baconipsum.com/api/',
 		'https://api.github.com/users/',
 		'https://api.openweathermap.org/data/',
+		/\.(html|css|js|json)$/,
 	]
 };

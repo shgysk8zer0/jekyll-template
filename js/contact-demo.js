@@ -1,12 +1,12 @@
 import { HTMLNotificationElement } from 'https://cdn.kernvalley.us/components/notification/html-notification.js';
 import { alert } from 'https://cdn.kernvalley.us/js/std-js/asyncDialog.js';
-import { $ } from 'https://cdn.kernvalley.us/js/std-js/functions.js';
+import { each } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
 
 export async function submitHandler(event) {
 	event.preventDefault();
-	const target = event.target;
-	const data = new FormData(target);
-	$('fieldset, input, button', target).disable();
+	const base = event.target;
+	const data = new FormData(base);
+	each('fieldset, input, button', el => el.disabled = true, { base });
 
 	await new Promise(resolve => {
 		const notification = new HTMLNotificationElement(`Hi, ${data.get('name')}`, {
@@ -58,7 +58,7 @@ export async function submitHandler(event) {
 					break;
 
 				case 'clear':
-					target.reset();
+					base.reset();
 					notification.close();
 					break;
 
@@ -69,5 +69,5 @@ export async function submitHandler(event) {
 		});
 	});
 
-	$('fieldset, input, button', target).enable();
+	each('fieldset, input, button', el => el.disabled = false, { base });
 }
