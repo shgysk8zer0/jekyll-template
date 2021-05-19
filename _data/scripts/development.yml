@@ -1,4 +1,3 @@
 - src: /js/index.js
   type: module
   referrerPolicy: no-referrer
-  async: true

@@ -1,6 +1,7 @@
 /
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
   X-XSS-Protection: 1; mode=block
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
@@ -9,6 +10,7 @@
 /:placeholder/
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
   X-XSS-Protection: 1; mode=block
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
@@ -17,12 +19,14 @@
 /posts/*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
   X-XSS-Protection: 1; mode=block
   Link: </js/index.min.js>; rel=preload; as=script; referrerpolicy=no-referrer;
   Link: </css/index.min.css>; rel=preload; as=style; referrerpolicy=no-referrer;
   Content-Security-Policy: default-src 'self'; img-src *; script-src 'self' cdn.kernvalley.us unpkg.com/ www.google-analytics.com www.googletagmanager.com cdn.polyfill.io/v3/polyfill.min.js; style-src 'self' cdn.kernvalley.us unpkg.com/; connect-src 'self' cdn.kernvalley.us apps.kernvalley.us/apps.json cdn.kernvalley.us apps.kernvalley.us/apps.json api.github.com/users/ api.openweathermap.org/data/2.5/ www.google-analytics.com/ www.googletagmanager.com/gtag/ baconipsum.com/api/; font-src cdn.kernvalley.us; media-src *; frame-src www.youtube-nocookie.com; form-action 'self'; manifest-src 'self'; worker-src 'self'; reflected-xss block; upgrade-insecure-requests; block-all-mixed-content; disown-opener;
 
 /reset
+  Referrer-Policy: no-referrer
   Clear-Site-Data: "cache", "cookies", "storage"
   Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us;
 
