@@ -109,7 +109,7 @@ share_target:
 # iarc_rating_id:
 related_applications:
   - platform: webapp
-    url: /manifest.json
+    url: /webapp.webmanifest
   # - platform: play
   #   id: "twa.weather.kernvalley"
   #   url: "#"

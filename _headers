@@ -30,8 +30,11 @@
   Clear-Site-Data: "cache", "cookies", "storage"
   Content-Security-Policy: default-src 'self'; script-src 'self' cdn.kernvalley.us;
 
+/admin
+  Content-Security-Policy: default-src 'self' 'unsafe-inline';
+
 /service-worker.js
-  Content-Security-Policy: default-src 'self'; connect-src *; script-src 'self' *.netlify.live/service-worker.js *.netlify.app/service-worker.js cdn.kernvalley.us/service-worker.js;
+  Content-Security-Policy: default-src 'self'; connect-src *; script-src 'self' cdn.kernvalley.us/service-worker.js;
   Link: <//cdn.kernvalley.us/service-worker.js>; rel=preload; as=script
   Link: </sw-config.js>; rel=preload; as=script
 
