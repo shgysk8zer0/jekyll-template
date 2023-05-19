@@ -1,6 +1,6 @@
-import { HTMLNotificationElement } from 'https://cdn.kernvalley.us/components/notification/html-notification.js';
-import { alert } from 'https://cdn.kernvalley.us/js/std-js/asyncDialog.js';
-import { each } from 'https://cdn.kernvalley.us/js/std-js/dom.js';
+import { HTMLNotificationElement } from '@shgysk8zer0/components/notification/html-notification.js';
+import { alert } from '@shgysk8zer0/kazoo/asyncDialog.js';
+import { each } from '@shgysk8zer0/kazoo/dom.js';
 
 export async function submitHandler(event) {
 	event.preventDefault();
