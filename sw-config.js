@@ -26,7 +26,6 @@ const config = {
 		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}install/prompt.css',
 
 		/* Data and JSON */
-		'/manifest.json',
 
 		/* `customElements`templates */
 		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}button/share-to.html',
