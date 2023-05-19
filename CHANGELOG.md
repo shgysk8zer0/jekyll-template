@@ -13,6 +13,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v2.0.0]  2023-05-19
+
+### Added
+- Implement TrustedTypes
+- Implement import map
+
+### Changed
+- Switch to using unpkg
+- Update to node 18
+- Update packages
+
+### Removed
+- No more `<slide-sshow>`
+
 ## [v1.3.0] - 2021-02-16
 
 ### Added
