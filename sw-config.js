@@ -10,34 +10,28 @@ const config = {
 		/* Root document, pages, and posts */
 		'{{ site.pages | where: "pinned", true | map: "url" | join: "', '" }}',
 		'{{ site.posts | where: "pinned", true | map: "url" | join: "', '" }}',
-		'/manifest.json',
+		'/webapp.webamanifest',
 		'https://apps.kernvalley.us/apps.json',
 	].map(path => new URL(path, location.origin).href),
 	stale: [
 		/* JS */
+		'{{ site.data.importmap.imports["@shgysk8zer0/polyfills"] }}',
+		'{{ site.data.importmap.imports["@shgysk8zer0/kazoo/"] }}harden.js',
 		'/js/index.min.js',
-		'https://cdn.kernvalley.us/components/share-target.js',
 
 		/* CSS */
 		'/css/index.min.css',
-		'https://cdn.kernvalley.us/components/toast-message.css',
-		'https://cdn.kernvalley.us/components/leaflet/map.css',
-		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.css',
-		'https://cdn.kernvalley.us/components/slide-show/slide-show.css',
-		'https://cdn.kernvalley.us/components/github/user.css',
-		'https://cdn.kernvalley.us/components/install/prompt.css',
-		'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}button/share-to.css',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}github/user.css',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}install/prompt.css',
 
 		/* Data and JSON */
 		'/manifest.json',
 
 		/* `customElements`templates */
-		'https://cdn.kernvalley.us/components/toast-message.html',
-		'https://cdn.kernvalley.us/components/leaflet/map.html',
-		'https://cdn.kernvalley.us/components/share-to-button/share-to-button.html',
-		'https://cdn.kernvalley.us/components/slide-show/slide-show.html',
-		'https://cdn.kernvalley.us/components/github/user.html',
-		'https://cdn.kernvalley.us/components/install/prompt.html',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}button/share-to.html',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}github/user.html',
+		'{{ site.data.importmap.imports["@shgysk8zer0/components/"] }}install/prompt.html',
 
 		/* Images & Icons */
 		'/img/icons.svg',
