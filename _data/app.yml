@@ -1,6 +1,6 @@
 name: Jekyll Template
 shortName: Jekyll Template
-version: 2.0.0
+version: 2.0.1
 lang: en
 dir: ltr
 display: standalone
@@ -134,3 +134,4 @@ categories:
   - business
   - productivity
   - utilities
+

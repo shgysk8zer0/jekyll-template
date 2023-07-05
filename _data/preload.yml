@@ -1,13 +1,3 @@
-- href: "https://cdn.kernvalley.us/components/github/user.html"
-  as: fetch
-  type: text/html
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
-- href: "https://cdn.kernvalley.us/components/github/user.css"
-  as: style
-  type: text/css
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
 - href: "/img/neon.svg"
   as: image
   type: image/svg+xml
@@ -19,13 +9,3 @@
   crossOrigin: anonymous
   referrerPolicy: no-referrer
   importance: high
-- href: https://cdn.kernvalley.us/components/ad/block.css
-  as: style
-  type: text/css
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
-- href: https://cdn.kernvalley.us/components/ad/block.html
-  as: fetch
-  type: text/html
-  crossOrigin: anonymous
-  referrerPolicy: no-referrer
