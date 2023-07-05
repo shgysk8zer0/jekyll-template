@@ -5,8 +5,6 @@ trusted:
   - ga#script-url
   - goog#html
   - sanitizer-raw#html
-  - purify-raw#html
-  - purify#html
   - weather-current#html
   - krv-events#html
   - github-user#html

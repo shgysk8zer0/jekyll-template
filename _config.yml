@@ -3,7 +3,7 @@ author: Chris Zuber
 title: Jekyll Template Demo
 url: 'https://infallible-galileo-ac41ee.netlify.app'
 markdown: kramdown
-version: 2.0.0
+version: 2.0.1
 timezone: America/Los_Angeles
 lang: en
 dir: ltr

@@ -1,4 +1,5 @@
 ---
 layout: null
+permalink: webapp.webmanifest
 ---
 {% include common/webapp.webmanifest app=site.data.app %}
